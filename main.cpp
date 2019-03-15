@@ -1,10 +1,11 @@
 #if defined __GNUC__ || defined __clang__
-// g++ src/main.cpp -lstdc++fs -o bin/test_driver.out
+// g++ main.cpp -lstdc++fs -o test_driver.out
 # include <experimental/filesystem>
 #else
 # include <filesystem>
 #endif
 
+#include <algorithm>
 #include <fstream>
 #include <iostream>
 #include <string>
