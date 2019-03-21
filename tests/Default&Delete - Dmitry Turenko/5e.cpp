@@ -1,6 +1,5 @@
 /**
  * Test for restrict instantiation with convertible types
- * Should not compile
  * 
  * Done by Turenko Dmitry
 */

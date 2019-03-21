@@ -1,6 +1,5 @@
 /**
  * Test for basic behavior of 'default' specifier
- * Should compile and return 0
  * 
  * Done by Turenko Dmitry
 */

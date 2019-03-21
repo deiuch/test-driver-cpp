@@ -1,6 +1,5 @@
 /**
  * Test for deleting inherited function
- * Should not compile
  * 
  * Done by Turenko Dmitry
 */

@@ -1,7 +1,7 @@
 /**
  * Test defines trial to override non-virtual function
  * 
- * Test should not compile
+ * Done by Turenko Dmitry
 */
 struct B {
     int foo() {

@@ -1,6 +1,5 @@
 /**
  * Test for restricting copy operator=
- * Should not compile
  * 
  * Done by Turenko Dmitry
 */

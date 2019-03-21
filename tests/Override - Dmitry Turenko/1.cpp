@@ -1,7 +1,7 @@
 /**
  * Test defines basic usage of `override` identifier
  * 
- * Test should compile and return 0 in correct scenario
+ * Done by Turenko Dmitry
 */
 struct B {
     virtual int foo() { return 125; }

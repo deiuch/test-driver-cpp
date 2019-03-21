@@ -1,7 +1,7 @@
 /**
  * Test defines error detection with `override` identifier
  * 
- * Test should not compile
+ * Done by Turenko Dmitry
 */
 struct B {
     virtual int foo() {

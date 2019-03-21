@@ -1,6 +1,5 @@
 /**
  * Test for deleting candidate function for specific type
- * Should not compile
  * 
  * Done by Turenko Dmitry
 */

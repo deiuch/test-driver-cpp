@@ -2,7 +2,7 @@
  * Test defines usage of `override` identifier in romb-like
  * dependency diagram
  * 
- * Test should compile and return 0 in correct scenario
+ * Done by Turenko Dmitry
 */
 
 struct B {

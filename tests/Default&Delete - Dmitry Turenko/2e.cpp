@@ -1,6 +1,5 @@
 /**
  * Test for basic behavior of 'delete' specifier
- * Should not compile
  * 
  * Done by Turenko Dmitry
 */
