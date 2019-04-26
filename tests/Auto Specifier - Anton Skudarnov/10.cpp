@@ -27,10 +27,12 @@ int main()
 	auto r1 = foo(l);
 	auto r2 = foo2(l);
 	auto r3 = foo3(l);
-	auto r4 = foo(l);
+
+	auto r4 = foo4(l);
 
 	if (typeid(r1) == typeid(int) && typeid(r2) == typeid(int) &&
-		typeid(r3) == typeid(int) && typeid(r4) == typeid(int)) 
+		typeid(r3) == typeid(int) && typeid(r4) == typeid(int)) //Identical
+
 	{
 		return 1;
 	}
