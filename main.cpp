@@ -1,3 +1,7 @@
+#if __cplusplus < 201703L
+# error "C++17 or higher is required"
+#endif
+
 #if defined __GNUC__ || defined __clang__
 // g++ main.cpp -lstdc++fs -o test_driver.out
 # include <experimental/filesystem>
@@ -24,57 +28,90 @@ namespace Logging
 static const fs::path log_path = fs::path("tests.log");
 static const fs::path tmp_log_path = fs::path("tmp.log");
 
+template<bool verbose = true>
 class Logger
 {
 	std::ofstream log_file { log_path };
 	std::ifstream tmp_log_file { tmp_log_path };
 
-	long long int succeeded = 0;
-	long long int failed = 0;
+	size_t n_dirs = 0;
+	size_t n_files = 0;
+	size_t succeeded = 0;
+	size_t failed = 0;
 
 	fs::path cur_dir;
 	fs::path cur_file;
 	std::string cur_compiler;
 
+	void log_intro()
+	{
+		// TODO
+	}
+
+	void log_outro()
+	{
+		// TODO
+	}
+
 public:
+
+	Logger()
+	{
+		log_intro();
+	}
 
 	void dir_entered(const fs::path &dir)
 	{
 		cur_dir = dir;
-		// TODO
+		++n_dirs;
+		if constexpr(verbose)
+			std::cout << "\n\n===== Enter directory: " << dir << std::endl;
+
+		log_file << "\n\n\n==================== DIRECTORY: "
+			<< dir << " ====================\n";
 	}
 
 	void file_opened(const fs::path &file)
 	{
 		cur_file = file;
-		// TODO
+		++n_files;
+		if constexpr (verbose) std::cout << file << std::endl;
+
+		log_file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~ FILE: " << file
+			<< "~~~~~~~~~~~~~~~~~~~~~~\n";
 	}
 
 	void compiler_considered(const std::string &command)
 	{
 		cur_compiler = command;
-		// TODO
+		// if constexpr (verbose) std::cout << "\n";
 	}
 
 	void log_test(const bool &res)
 	{
-		// TODO
 		++(res ? succeeded : failed);
+		log_file << "\n\nTEST #" << succeeded + failed + 1
+			<< " " << (res ? "succeeded" : "FAILED")
+			<< "\nFile: " << cur_file
+			<< "\nCompiler: \"" << cur_compiler << '\n'
+			<< "Program/Compiler output (stderr):\n"
+			<< tmp_log_file.rdbuf();
 	}
 
 	bool overall_report()
 	{
-		// TODO
-		std::cout << "Succeeded: " << succeeded << std::endl
-			<< "Failed: " << failed << std::endl;
+		if constexpr (verbose)
+			std::cout << "Succeeded: " << succeeded << std::endl
+				<< "Failed: " << failed << std::endl;
 		return /*(bool)*/ failed;
 	}
 
 	~Logger()
 	{
+		log_outro();
 		fs::remove(tmp_log_path);
 	}
-} log;
+};
 
 } // namespace Logging
 
@@ -136,7 +173,7 @@ inline bool is_cpp_file(const fs::directory_entry &file)
 
 int main(const int argc, const char * const * const argv)
 {
-	using Logging::log;
+	Logging::Logger log;
 
 	for (const auto &dir : fs::directory_iterator(Testing::test_dir))
 	{
@@ -158,6 +195,8 @@ int main(const int argc, const char * const * const argv)
 			}
 		}
 	}
+
+	fs::remove(Testing::run_path);
 
 	return log.overall_report();
 }
