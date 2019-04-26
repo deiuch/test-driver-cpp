@@ -58,6 +58,7 @@ class Logger
 			<< "\n# of tests: " << succeeded + failed
 			<< "\n# of tests succeeded: " << succeeded
 			<< "\n# of tests failed: " << failed
+			<< "\nSee " << log_path << " for details."
 			<< std::endl;
 	}
 
@@ -76,7 +77,7 @@ public:
 			std::cout << "\n\n===== Enter directory: " << dir << std::endl;
 
 		log_file << "\n\n\n==================== DIRECTORY: "
-			<< dir << " ====================\n";
+			<< dir << " ====================" << std::endl;
 	}
 
 	void file_opened(const fs::path &file)
@@ -86,7 +87,7 @@ public:
 		if constexpr (verbose) std::cout << file << std::endl;
 
 		log_file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~ FILE: " << file
-			<< "~~~~~~~~~~~~~~~~~~~~~~\n";
+			<< "~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 	}
 
 	void compiler_considered(const std::string &command)
@@ -102,13 +103,18 @@ public:
 			std::cout << cur_compiler << ": "
 				<< (res ? "OK" : "FAIL") << std::endl;
 
-		log_file << "\n\nTEST #" << succeeded + failed + 1
+		tmp_log_file.open(tmp_log_path);
+		log_file << "\n\nTEST #" << succeeded + failed
 			<< " " << (res ? "succeeded" : "FAILED")
 			<< "\nFile: " << cur_file
 			<< "\nCompiler: \"" << cur_compiler << '\n'
-			<< "Program/Compiler output (stderr):\n"
-			<< tmp_log_file.rdbuf()
-			<< std::endl;
+			<< "Program/Compiler output (stderr):" << std::endl;
+		// FIXME: efficiency, work with streams?
+		char c;
+		while (tmp_log_file.get(c))
+			log_file << c;
+		log_file << std::endl;
+		tmp_log_file.close();
 	}
 
 	bool overall_report()
@@ -116,14 +122,9 @@ public:
 		if constexpr (verbose)
 			std::cout << "\n\nSucceeded: " << succeeded << std::endl
 				<< "Failed: " << failed << std::endl;
-		return /*(bool)*/ failed;
-	}
 
-	~Logger()
-	{
 		log_outro();
-		log_file.close();
-		fs::remove(tmp_log_path);
+		return /*(bool)*/ failed;
 	}
 };
 
@@ -135,30 +136,30 @@ namespace Testing
 
 static const std::vector<std::string> compiler_list =
 {
-	"g++ -std=c++2a -pedantic-errors",
-	"clang++ -std=c++2a -pedantic-errors",
+	"g++-8 -std=c++2a -pedantic-errors -o ",
+	"clang++-7 -std=c++2a -pedantic-errors -o ",
 	// "cl /std:c++latest /permissive- /Fe a.exe",
 };
-static const std::string run_path = "./a.out";
+static const fs::path exec_path = fs::path("a.exe");
 
 static const fs::path test_dir = fs::path("tests");
 
 bool perform_test(
 	const fs::path &src,
 	const std::string &compile_command,
-	const std::string &run_command = run_path,
+	const std::string &executable = exec_path.string(),
 	const fs::path &err_log = Logging::tmp_log_path
 	)
 {
 	std::string src_path = src.string();
-	std::string log_ending = " 2> " + err_log.string();
+	std::string log_ending = " > " + err_log.string() + " 2>&1";
 
 #ifdef _WIN32
 	std::replace(src_path.begin(), src_path.end(), '\\', '/');  // Useful for `wsl'
 #endif
 
 	const std::string compile_str
-		= compile_command + " \"" + src_path + "\"" + log_ending;
+		= compile_command + executable + " \"" + src_path + "\"" + log_ending;
 	if (system(compile_str.c_str()))  // If compilation failed...
 	{
 		// Check if compilation was supposed to fail
@@ -167,7 +168,7 @@ bool perform_test(
 	else
 	{
 		// Check if the compiled app executes successfully
-		const std::string run_str = run_command + log_ending;
+		const std::string run_str = "./" + executable + log_ending;
 		return !system(run_str.c_str());
 	}
 }
@@ -208,12 +209,14 @@ int main(const int argc, const char * const * const argv)
 
 			for (const auto &compiler : Testing::compiler_list)
 			{
-				log.compiler_considered(compiler);
+				log.compiler_considered(compiler + Testing::exec_path.string());
 
 				log.log_test(Testing::perform_test(file, compiler));
+				fs::remove(Testing::exec_path);
 			}
 		}
 	}
 
+	fs::remove(Logging::tmp_log_path);
 	return log.overall_report();
 }
