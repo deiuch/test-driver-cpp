@@ -114,7 +114,7 @@ public:
 	bool overall_report()
 	{
 		if constexpr (verbose)
-			std::cout << "Succeeded: " << succeeded << std::endl
+			std::cout << "\n\nSucceeded: " << succeeded << std::endl
 				<< "Failed: " << failed << std::endl;
 		return /*(bool)*/ failed;
 	}
@@ -122,6 +122,7 @@ public:
 	~Logger()
 	{
 		log_outro();
+		log_file.close();
 		fs::remove(tmp_log_path);
 	}
 };
@@ -132,7 +133,12 @@ public:
 namespace Testing
 {
 
-static const std::vector<std::string> compiler_list = { "g++ -std=c++2a", "clang++ -std=c++2a" };
+static const std::vector<std::string> compiler_list =
+{
+	"g++ -std=c++2a -pedantic-errors",
+	"clang++ -std=c++2a -pedantic-errors",
+	// "cl /std:c++latest /permissive- /Fe a.exe",
+};
 static const std::string run_path = "./a.out";
 
 static const fs::path test_dir = fs::path("tests");
@@ -208,8 +214,6 @@ int main(const int argc, const char * const * const argv)
 			}
 		}
 	}
-
-	// fs::remove(Testing::run_path);
 
 	return log.overall_report();
 }
