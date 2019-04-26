@@ -46,19 +46,21 @@ class Logger
 				"See " << log_path << " for results.";
 
 		log_file << "C++ Test Driver Results"
-			// << "Date: " << ...;
+			// << "Date: " << ...
 			<< std::endl;
 	}
 
 	void log_outro()
 	{
+		if constexpr (verbose)
+			std::cout << "\nSee " << log_path << " for details.";
+
 		log_file << "\nRESULTS:"
 			"\n# of directories: " << n_dirs
 			<< "\n# of files: " << n_files
 			<< "\n# of tests: " << succeeded + failed
 			<< "\n# of tests succeeded: " << succeeded
 			<< "\n# of tests failed: " << failed
-			<< "\nSee " << log_path << " for details."
 			<< std::endl;
 	}
 
@@ -87,7 +89,7 @@ public:
 		if constexpr (verbose) std::cout << file << std::endl;
 
 		log_file << "\n\n~~~~~~~~~~~~~~~~~~~~~~~ FILE: " << file
-			<< "~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
+			<< " ~~~~~~~~~~~~~~~~~~~~~~" << std::endl;
 	}
 
 	void compiler_considered(const std::string &command)
