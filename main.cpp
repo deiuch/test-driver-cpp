@@ -1,7 +1,3 @@
-#if __cplusplus < 201703L
-# error "C++17 or higher is required"
-#endif
-
 #if defined __GNUC__ || defined __clang__
 // g++ main.cpp -lstdc++fs -o test_driver.out
 # include <experimental/filesystem>
@@ -45,12 +41,24 @@ class Logger
 
 	void log_intro()
 	{
-		// TODO
+		if constexpr (verbose)
+			std::cout << "C++ Compilers Test Driver.\n"
+				"See " << log_path << " for results.";
+
+		log_file << "C++ Test Driver Results"
+			// << "Date: " << ...;
+			<< std::endl;
 	}
 
 	void log_outro()
 	{
-		// TODO
+		log_file << "\nRESULTS:"
+			"\n# of directories: " << n_dirs
+			<< "\n# of files: " << n_files
+			<< "\n# of tests: " << succeeded + failed
+			<< "\n# of tests succeeded: " << succeeded
+			<< "\n# of tests failed: " << failed
+			<< std::endl;
 	}
 
 public:
@@ -64,7 +72,7 @@ public:
 	{
 		cur_dir = dir;
 		++n_dirs;
-		if constexpr(verbose)
+		if constexpr (verbose)
 			std::cout << "\n\n===== Enter directory: " << dir << std::endl;
 
 		log_file << "\n\n\n==================== DIRECTORY: "
@@ -95,7 +103,8 @@ public:
 			<< "\nFile: " << cur_file
 			<< "\nCompiler: \"" << cur_compiler << '\n'
 			<< "Program/Compiler output (stderr):\n"
-			<< tmp_log_file.rdbuf();
+			<< tmp_log_file.rdbuf()
+			<< std::endl;
 	}
 
 	bool overall_report()
@@ -119,7 +128,7 @@ public:
 namespace Testing
 {
 
-static const std::vector<std::string> compiler_list = { "g++", "clang++-7" };
+static const std::vector<std::string> compiler_list = { "g++", "clang++" };
 static const std::string run_path = "./a.out";
 
 static const fs::path test_dir = fs::path("tests");
@@ -196,7 +205,7 @@ int main(const int argc, const char * const * const argv)
 		}
 	}
 
-	fs::remove(Testing::run_path);
+	// fs::remove(Testing::run_path);
 
 	return log.overall_report();
 }
