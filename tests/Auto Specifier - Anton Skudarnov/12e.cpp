@@ -7,3 +7,5 @@ int main()
 {
 	foo(“C++ is cool ? ”, true);
 }
+
+//a parameter cannot have a type that contains 'auto'

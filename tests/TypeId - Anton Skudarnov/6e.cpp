@@ -1,16 +1,17 @@
-#include <cstdint>
-#include <iostream>
-using typeid_t = uintptr_t;
 
-template <typename T>
-constexpr typeid_t type_id() noexcept
-{
-	return typeid_t(type_id<T>);
-}
+
+const int&& foo() {
+	return 1;
+};
+auto i = foo(); //  i будет иметь тип int
+decltype(auto) i2 = foo(); //  i2 будет иметь тип const int&&
 
 int main()
 {
-	::std::cout << ::std::integral_constant<typeid_t, type_id<float>()>{} << ::std::endl;
 
+
+	if (typeid(i) == typeid(i2)) {
+		return 1;
+	}
 	return 0;
 }

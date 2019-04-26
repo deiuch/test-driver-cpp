@@ -1,10 +1,11 @@
+#include <typeinfo>
 class A {};
 
-class B:A{};
+class B :A {};
 
 class D {};
 
-class C:A,D{};
+class C :A, D {};
 
 int main()
 {
