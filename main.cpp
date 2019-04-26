@@ -98,6 +98,10 @@ public:
 	void log_test(const bool &res)
 	{
 		++(res ? succeeded : failed);
+		if constexpr (verbose)
+			std::cout << cur_compiler << ": "
+				<< (res ? "OK" : "FAIL") << std::endl;
+
 		log_file << "\n\nTEST #" << succeeded + failed + 1
 			<< " " << (res ? "succeeded" : "FAILED")
 			<< "\nFile: " << cur_file
