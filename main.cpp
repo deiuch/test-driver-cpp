@@ -18,46 +18,6 @@ namespace fs = std::
 	filesystem;
 
 
-namespace Testing
-{
-
-static const std::vector<std::string> compiler_list = { "g++", "clang++-7" };
-static const std::string run_path = "./a.out";
-
-static const fs::path test_dir = fs::path("tests");
-
-bool perform_test(
-	const fs::path &src,
-	const std::string &compile_command,
-	const std::string &run_command = run_path,
-	const fs::path &err_log = Logging::tmp_log_path
-	)
-{
-	std::string src_path = src.string();
-	std::string log_ending = " 2> " + err_log.string();
-
-#ifdef _WIN32
-	std::replace(src_path.begin(), src_path.end(), '\\', '/');  // Useful for `wsl'
-#endif
-
-	const std::string compile_str
-		= compile_command + " \"" + src_path + "\"" + log_ending;
-	if (system(compile_str.c_str()))  // If compilation failed...
-	{
-		// Check if compilation was supposed to fail
-		return src_path.find('e') != std::string::npos;
-	}
-	else
-	{
-		// Check if the compiled app executes successfully
-		const std::string run_str = run_command + log_ending;
-		return !system(run_str.c_str());
-	}
-}
-
-} // namespace Testing
-
-
 namespace Logging
 {
 
@@ -117,6 +77,46 @@ public:
 } log;
 
 } // namespace Logging
+
+
+namespace Testing
+{
+
+static const std::vector<std::string> compiler_list = { "g++", "clang++-7" };
+static const std::string run_path = "./a.out";
+
+static const fs::path test_dir = fs::path("tests");
+
+bool perform_test(
+	const fs::path &src,
+	const std::string &compile_command,
+	const std::string &run_command = run_path,
+	const fs::path &err_log = Logging::tmp_log_path
+	)
+{
+	std::string src_path = src.string();
+	std::string log_ending = " 2> " + err_log.string();
+
+#ifdef _WIN32
+	std::replace(src_path.begin(), src_path.end(), '\\', '/');  // Useful for `wsl'
+#endif
+
+	const std::string compile_str
+		= compile_command + " \"" + src_path + "\"" + log_ending;
+	if (system(compile_str.c_str()))  // If compilation failed...
+	{
+		// Check if compilation was supposed to fail
+		return src_path.find('e') != std::string::npos;
+	}
+	else
+	{
+		// Check if the compiled app executes successfully
+		const std::string run_str = run_command + log_ending;
+		return !system(run_str.c_str());
+	}
+}
+
+} // namespace Testing
 
 
 inline bool is_cpp_extension(const std::string &str)
