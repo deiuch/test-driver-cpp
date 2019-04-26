@@ -1,5 +1,6 @@
 
 
+
 const int&& foo() {
 	return 1;
 };
@@ -13,5 +14,3 @@ int main()
 	if (typeid(i) == typeid(i2)) {
 		return 1;
 	}
-	return 0;
-}
