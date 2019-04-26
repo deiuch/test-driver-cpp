@@ -132,7 +132,7 @@ public:
 namespace Testing
 {
 
-static const std::vector<std::string> compiler_list = { "g++", "clang++" };
+static const std::vector<std::string> compiler_list = { "g++ -std=c++2a", "clang++ -std=c++2a" };
 static const std::string run_path = "./a.out";
 
 static const fs::path test_dir = fs::path("tests");
