@@ -1,0 +1,4379 @@
+C++ Test Driver Results
+
+
+
+==================== DIRECTORY: "tests\\Auto Specifier - Anton Skudarnov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #1 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #2 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\10.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #3 FAILED
+File: "tests\\Auto Specifier - Anton Skudarnov\\10.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #4 FAILED
+File: "tests\\Auto Specifier - Anton Skudarnov\\10.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\11e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #5 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\11e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/11e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/11e.cpp:29:16: error: cannot bind non-const lvalue reference of type ‘int&’ to an rvalue of type ‘int’
+  auto& r1 = foo(l); //initial value to non const must be an lvalue  //cannot convert from 'int' to 'int &'
+             ~~~^~~
+tests/Auto Specifier - Anton Skudarnov/11e.cpp:31:17: error: cannot bind non-const lvalue reference of type ‘int&’ to an rvalue of type ‘int’
+  auto& r3 = foo3(l); //initial value to non const must be an lvalue  //cannot convert from 'int' to 'int &'
+             ~~~~^~~
+
+
+
+TEST #6 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\11e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/11e.cpp:29:8: error: non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
+        auto& r1 = foo(l); //initial value to non const must be an lvalue  //cannot convert from 'int' to 'int &'
+              ^    ~~~~~~
+tests/Auto Specifier - Anton Skudarnov/11e.cpp:31:8: error: non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
+        auto& r3 = foo3(l); //initial value to non const must be an lvalue  //cannot convert from 'int' to 'int &'
+              ^    ~~~~~~~
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\12e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #7 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\12e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:6: error: stray ‘\342’ in program
+  foo(“C++ is cool ? ”, true);
+      ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:7: error: stray ‘\200’ in program
+  foo(“C++ is cool ? ”, true);
+       ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:8: error: stray ‘\234’ in program
+  foo(“C++ is cool ? ”, true);
+        ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:23: error: stray ‘\342’ in program
+  foo(“C++ is cool ? ”, true);
+                       ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:24: error: stray ‘\200’ in program
+  foo(“C++ is cool ? ”, true);
+                        ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:25: error: stray ‘\235’ in program
+  foo(“C++ is cool ? ”, true);
+                         ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:1:10: error: use of ‘auto’ in parameter declaration only available with -fconcepts
+ auto foo(auto v1, auto v2) -> decltype(v1 + v2);
+          ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:1:19: error: use of ‘auto’ in parameter declaration only available with -fconcepts
+ auto foo(auto v1, auto v2) -> decltype(v1 + v2);
+                   ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:2:9: error: use of ‘auto’ in parameter declaration only available with -fconcepts
+ int foo(auto v1, bool v2);
+         ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:9: error: ‘C’ was not declared in this scope
+  foo(“C++ is cool ? ”, true);
+         ^
+
+
+
+TEST #8 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\12e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:1:10: error: 'auto' not allowed in function prototype
+auto foo(auto v1, auto v2) -> decltype(v1 + v2);
+         ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:1:19: error: 'auto' not allowed in function prototype
+auto foo(auto v1, auto v2) -> decltype(v1 + v2);
+                  ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:2:9: error: 'auto' not allowed in function prototype
+int foo(auto v1, bool v2);
+        ^~~~
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:6: error: non-ASCII characters are not allowed outside of literals and identifiers
+        foo(“C++ is cool ? ”, true);
+            ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:9: error: use of undeclared identifier 'C'
+        foo(“C++ is cool ? ”, true);
+             ^
+tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:23: error: non-ASCII characters are not allowed outside of literals and identifiers
+        foo(“C++ is cool ? ”, true);
+                           ^
+6 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\2e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #9 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\2e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/2e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:12: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘void’)
+  std::cout << f(); //This will cause compile error because of the void type
+  ~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+       ^~~~~~~~
+/usr/include/c++/8/ostream:108:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+/usr/include/c++/8/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+       operator<<(__ios_type& (*__pf)(__ios_type&))
+       ^~~~~~~~
+/usr/include/c++/8/ostream:117:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+/usr/include/c++/8/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(ios_base& (*__pf) (ios_base&))
+       ^~~~~~~~
+/usr/include/c++/8/ostream:127:7: note:   no known conversion for argument 1 from ‘void’ to ‘std::ios_base& (*)(std::ios_base&)’
+/usr/include/c++/8/ostream:166:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(long __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:166:7: note:   no known conversion for argument 1 from ‘void’ to ‘long int’
+/usr/include/c++/8/ostream:170:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(unsigned long __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:170:7: note:   no known conversion for argument 1 from ‘void’ to ‘long unsigned int’
+/usr/include/c++/8/ostream:174:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(bool __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:174:7: note:   no known conversion for argument 1 from ‘void’ to ‘bool’
+In file included from /usr/include/c++/8/ostream:693,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/bits/ostream.tcc:91:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>]’
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/8/bits/ostream.tcc:91:5: note:   no known conversion for argument 1 from ‘void’ to ‘short int’
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:181:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(unsigned short __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:181:7: note:   no known conversion for argument 1 from ‘void’ to ‘short unsigned int’
+In file included from /usr/include/c++/8/ostream:693,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/bits/ostream.tcc:105:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>]’
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/8/bits/ostream.tcc:105:5: note:   no known conversion for argument 1 from ‘void’ to ‘int’
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:192:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(unsigned int __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:192:7: note:   no known conversion for argument 1 from ‘void’ to ‘unsigned int’
+/usr/include/c++/8/ostream:201:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(long long __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:201:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long int’
+/usr/include/c++/8/ostream:205:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(unsigned long long __n)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:205:7: note:   no known conversion for argument 1 from ‘void’ to ‘long long unsigned int’
+/usr/include/c++/8/ostream:220:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(double __f)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:220:7: note:   no known conversion for argument 1 from ‘void’ to ‘double’
+/usr/include/c++/8/ostream:224:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(float __f)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:224:7: note:   no known conversion for argument 1 from ‘void’ to ‘float’
+/usr/include/c++/8/ostream:232:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(long double __f)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:232:7: note:   no known conversion for argument 1 from ‘void’ to ‘long double’
+/usr/include/c++/8/ostream:245:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+       operator<<(const void* __p)
+       ^~~~~~~~
+/usr/include/c++/8/ostream:245:7: note:   no known conversion for argument 1 from ‘void’ to ‘const void*’
+In file included from /usr/include/c++/8/ostream:693,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/bits/ostream.tcc:119:5: note: candidate: ‘std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]’
+     basic_ostream<_CharT, _Traits>::
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/8/bits/ostream.tcc:119:5: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__streambuf_type*’ {aka ‘std::basic_streambuf<char>*’}
+In file included from /usr/include/c++/8/bits/basic_string.h:48,
+                 from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/string_view:545:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)’
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/8/string_view:545:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17: note:   mismatched types ‘std::basic_string_view<_CharT, _Traits>’ and ‘void’
+  std::cout << f(); //This will cause compile error because of the void type
+                 ^
+In file included from /usr/include/c++/8/string:52,
+                 from /usr/include/c++/8/bits/locale_classes.h:40,
+                 from /usr/include/c++/8/bits/ios_base.h:41,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/bits/basic_string.h:6314:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:6314:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’ and ‘void’
+  std::cout << f(); //This will cause compile error because of the void type
+                 ^
+In file included from /usr/include/c++/8/bits/ios_base.h:46,
+                 from /usr/include/c++/8/ios:42,
+                 from /usr/include/c++/8/ostream:38,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/system_error:217:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::error_code&)’
+     operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+     ^~~~~~~~
+/usr/include/c++/8/system_error:217:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘const std::error_code&’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:497:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)’
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:497:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17: note:   deduced conflicting types for parameter ‘_CharT’ (‘char’ and ‘void’)
+  std::cout << f(); //This will cause compile error because of the void type
+                 ^
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:502:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)’
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:502:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘char’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:508:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)’
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:508:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘char’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:514:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)’
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:514:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘signed char’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:519:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)’
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:519:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘unsigned char’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:539:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)’
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:539:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17: note:   mismatched types ‘const _CharT*’ and ‘void’
+  std::cout << f(); //This will cause compile error because of the void type
+                 ^
+In file included from /usr/include/c++/8/ostream:693,
+                 from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/bits/ostream.tcc:321:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)’
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/8/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘const char*’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:556:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)’
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:556:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘const char*’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:569:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)’
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:569:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘const signed char*’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:574:5: note: candidate: ‘template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)’
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:574:5: note:   template argument deduction/substitution failed:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:16: note:   cannot convert ‘f()’ (type ‘void’) to type ‘const unsigned char*’
+  std::cout << f(); //This will cause compile error because of the void type
+               ~^~
+In file included from /usr/include/c++/8/iostream:39,
+                 from tests/Auto Specifier - Anton Skudarnov/2e.cpp:1:
+/usr/include/c++/8/ostream:682:5: note: candidate: ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&)’
+     operator<<(_Ostream&& __os, const _Tp& __x)
+     ^~~~~~~~
+/usr/include/c++/8/ostream:682:5: note:   template argument deduction/substitution failed:
+/usr/include/c++/8/ostream: In substitution of ‘template<class _Ostream, class _Tp> typename std::enable_if<std::__and_<std::__not_<std::is_lvalue_reference<_Tp> >, std::__is_convertible_to_basic_ostream<_Ostream>, std::__is_insertable<typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type, const _Tp&, void> >::value, typename std::__is_convertible_to_basic_ostream<_Tp>::__ostream_type>::type std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = void]’:
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17:   required from here
+/usr/include/c++/8/ostream:682:5: error: forming reference to void
+
+
+
+TEST #10 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\2e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:12: error: invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'void')
+        std::cout << f(); //This will cause compile error because of the void type
+        ~~~~~~~~~ ^  ~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/system_error:217:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'const std::error_code' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:108:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'std::basic_ostream<char, std::char_traits<char> >::__ostream_type &(*)(std::basic_ostream<char, std::char_traits<char> >::__ostream_type &)' (aka 'basic_ostream<char, std::char_traits<char> > &(*)(basic_ostream<char, std::char_traits<char> > &)') for 1st argument
+      operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:117:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'std::basic_ostream<char, std::char_traits<char> >::__ios_type &(*)(std::basic_ostream<char, std::char_traits<char> >::__ios_type &)' (aka 'basic_ios<char, std::char_traits<char> > &(*)(basic_ios<char, std::char_traits<char> > &)') for 1st argument
+      operator<<(__ios_type& (*__pf)(__ios_type&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:127:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'std::ios_base &(*)(std::ios_base &)' for 1st argument
+      operator<<(ios_base& (*__pf) (ios_base&))
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:166:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'long' for 1st argument
+      operator<<(long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:170:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'unsigned long' for 1st argument
+      operator<<(unsigned long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:174:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'bool' for 1st argument
+      operator<<(bool __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:178:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'short' for 1st argument
+      operator<<(short __n);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:181:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'unsigned short' for 1st argument
+      operator<<(unsigned short __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:189:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'int' for 1st argument
+      operator<<(int __n);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:192:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'unsigned int' for 1st argument
+      operator<<(unsigned int __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:201:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'long long' for 1st argument
+      operator<<(long long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:205:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'unsigned long long' for 1st argument
+      operator<<(unsigned long long __n)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:220:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'double' for 1st argument
+      operator<<(double __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:224:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'float' for 1st argument
+      operator<<(float __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:232:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'long double' for 1st argument
+      operator<<(long double __f)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:245:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'const void *' for 1st argument
+      operator<<(const void* __p)
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:270:7: note: candidate function not viable: cannot convert argument of incomplete type 'void' to 'std::basic_ostream<char, std::char_traits<char> >::__streambuf_type *' (aka 'basic_streambuf<char, std::char_traits<char> > *') for 1st argument
+      operator<<(__streambuf_type* __sb);
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:502:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'char' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:508:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:514:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'signed char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:519:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'unsigned char' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:556:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:569:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'const signed char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:574:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'const unsigned char *' for 2nd argument
+    operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/ostream.tcc:321:5: note: candidate function template not viable: cannot convert argument of incomplete type 'void' to 'const char *' for 2nd argument
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:497:5: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'void')
+    operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/string_view:545:5: note: candidate template ignored: could not match 'basic_string_view<type-parameter-0-0, type-parameter-0-1>' against 'void'
+    operator<<(basic_ostream<_CharT, _Traits>& __os,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/basic_string.h:6314:5: note: candidate template ignored: could not match 'basic_string<type-parameter-0-0, type-parameter-0-1, type-parameter-0-2>' against 'void'
+    operator<<(basic_ostream<_CharT, _Traits>& __os,
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:539:5: note: candidate template ignored: could not match 'const _CharT *' against 'void'
+    operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/ostream:682:5: note: candidate template ignored: substitution failure [with _Ostream = std::basic_ostream<char> &, _Tp = void]: cannot form a reference to 'void'
+    operator<<(_Ostream&& __os, const _Tp& __x)
+    ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\3.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #11 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\3.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #12 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\3.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\3a.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #13 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\3a.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/3a.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:15: error: must ‘#include <typeinfo>’ before using ‘typeid’
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:1:1:
++#include <typeinfo>
+ auto f() {
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:15:
+  if (typeid(f()) == typeid(void)) {
+               ^
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:32: error: must ‘#include <typeinfo>’ before using ‘typeid’
+  if (typeid(f()) == typeid(void)) {
+                                ^
+
+
+
+TEST #14 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\3a.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:6: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(f()) == typeid(void)) {
+            ^
+tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:21: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(f()) == typeid(void)) {
+                           ^
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\4e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #15 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\4e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/4e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:11: error: two or more data types in declaration of ‘a’
+  auto int a = 1;
+           ^
+
+
+
+TEST #16 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\4e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:2: error: 'auto' storage class specifier is not permitted in C++11, and will not be supported in future releases [-Werror,-Wauto-storage-class]
+        auto int a = 1;
+        ^~~~~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\5e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #17 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\5e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/5e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:2: error: declaration of ‘auto v’ has no initializer
+  auto v;
+  ^~~~
+
+
+
+TEST #18 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\5e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:7: error: declaration of variable 'v' with deduced type 'auto' requires an initializer
+        auto v;
+             ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\6.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #19 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\6.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #20 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\6.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\7.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #21 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\7.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #22 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\7.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\7a.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #23 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\7a.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #24 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\7a.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\8.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #25 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\8.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/8.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/8.cpp:8:15: error: must ‘#include <typeinfo>’ before using ‘typeid’
+tests/Auto Specifier - Anton Skudarnov/8.cpp:1:1:
++#include <typeinfo>
+ auto f() {
+tests/Auto Specifier - Anton Skudarnov/8.cpp:8:15:
+  if (typeid(f()) == typeid(void)) {
+               ^
+tests/Auto Specifier - Anton Skudarnov/8.cpp:8:32: error: must ‘#include <typeinfo>’ before using ‘typeid’
+  if (typeid(f()) == typeid(void)) {
+                                ^
+
+
+
+TEST #26 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\8.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/8.cpp:8:6: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(f()) == typeid(void)) {
+            ^
+tests/Auto Specifier - Anton Skudarnov/8.cpp:8:21: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(f()) == typeid(void)) {
+                           ^
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Auto Specifier - Anton Skudarnov\\9e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #27 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\9e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:3:21: error: expected unqualified-id before ‘)’ token
+ constexpr auto auto() {
+                     ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:22: error: expected ‘)’ before ‘(’ token
+ typedef decltype(auto()) auto;
+                 ~    ^
+                      )
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:9: error: expected unqualified-id before ‘decltype’
+ typedef decltype(auto()) auto;
+         ^~~~~~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:8:17: error: expected unqualified-id before ‘=’ token
+ const auto auto = auto();
+                 ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:10:19: error: expected nested-name-specifier before ‘auto’
+ template<typename auto>
+                   ^~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:10:19: error: two or more data types in declaration of ‘parameter’
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:11:21: error: expected unqualified-id before ‘)’ token
+ constexpr auto auto() {
+                     ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:15:20: error: expected nested-name-specifier before ‘auto’
+ template <typename auto, typename auto, typename... auto>
+                    ^~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:15:20: error: two or more data types in declaration of ‘parameter’
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:15:35: error: expected nested-name-specifier before ‘auto’
+ template <typename auto, typename auto, typename... auto>
+                                   ^~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:15:35: error: two or more data types in declaration of ‘parameter’
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:15:53: error: expected ‘>’ before ‘auto’
+ template <typename auto, typename auto, typename... auto>
+                                                     ^~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:16:21: error: expected unqualified-id before ‘)’ token
+ constexpr auto auto() {
+                     ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp: In function ‘int main()’:
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:21:22: error: expected unqualified-id before ‘=’ token
+  constexpr auto auto = auto<auto, auto, auto, auto, auto, auto>();
+                      ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:22:22: error: expected unqualified-id before ‘=’ token
+  constexpr auto auto = auto<auto, auto, auto, auto, auto, auto, auto>();
+                      ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:23:9: error: expected primary-expression before ‘auto’
+  return auto * auto;
+         ^~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:23:8: error: expected ‘;’ before ‘auto’
+  return auto * auto;
+        ^~~~~
+        ;
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:23:16: error: expected unqualified-id before ‘auto’
+  return auto * auto;
+                ^~~~
+
+
+
+TEST #28 succeeded
+File: "tests\\Auto Specifier - Anton Skudarnov\\9e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:3:16: error: cannot combine with previous 'auto' declaration specifier
+constexpr auto auto() {
+               ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:3:21: error: expected unqualified-id
+constexpr auto auto() {
+                    ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:22: error: expected ')'
+typedef decltype(auto()) auto;
+                     ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:17: note: to match this '('
+typedef decltype(auto()) auto;
+                ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:26: error: cannot combine with previous 'decltype(auto)' declaration specifier
+typedef decltype(auto()) auto;
+                         ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:7:1: error: typedef requires a name [-Werror,-Wmissing-declarations]
+typedef decltype(auto()) auto;
+^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:8:12: error: cannot combine with previous 'auto' declaration specifier
+const auto auto = auto();
+           ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:8:17: error: expected unqualified-id
+const auto auto = auto();
+                ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:10:19: error: expected a qualified name after 'typename'
+template<typename auto>
+                  ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:10:19: error: expected ',' or '>' in template-parameter-list
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:11:16: error: cannot combine with previous 'auto' declaration specifier
+constexpr auto auto() {
+               ^
+tests/Auto Specifier - Anton Skudarnov/9e.cpp:11:21: error: expected unqualified-id
+constexpr auto auto() {
+                    ^
+11 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Bind - Maksim Surkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Bind - Maksim Surkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #29 succeeded
+File: "tests\\Bind - Maksim Surkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #30 succeeded
+File: "tests\\Bind - Maksim Surkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Bind - Maksim Surkov\\002.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #31 succeeded
+File: "tests\\Bind - Maksim Surkov\\002.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #32 succeeded
+File: "tests\\Bind - Maksim Surkov\\002.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Bind - Maksim Surkov\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #33 succeeded
+File: "tests\\Bind - Maksim Surkov\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
+/usr/include/c++/8/functional: In instantiation of ‘struct std::_Bind_check_arity<int (*)(int, int, int), int>’:
+/usr/include/c++/8/functional:787:12:   required from ‘struct std::_Bind_helper<false, int (&)(int, int, int), int>’
+/usr/include/c++/8/functional:808:5:   required by substitution of ‘template<class _Func, class ... _BoundArgs> typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...) [with _Func = int (&)(int, int, int); _BoundArgs = {int}]’
+tests/Bind - Maksim Surkov/003e.cpp:12:35:   required from here
+/usr/include/c++/8/functional:758:43: error: static assertion failed: Wrong number of arguments for function
+       static_assert(sizeof...(_BoundArgs) == sizeof...(_Args),
+                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+tests/Bind - Maksim Surkov/003e.cpp: In function ‘int main()’:
+tests/Bind - Maksim Surkov/003e.cpp:13:29: error: no match for call to ‘(std::_Bind<int (*(int))(int, int, int)>) (int, int)’
+     int result = binded(2, 3);
+                             ^
+In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
+/usr/include/c++/8/functional:480:2: note: candidate: ‘template<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) [with _Args = {_Args ...}; _Result = _Result; _Functor = int (*)(int, int, int); _Bound_args = {int}]’
+  operator()(_Args&&... __args)
+  ^~~~~~~~
+/usr/include/c++/8/functional:480:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/8/functional:491:2: note: candidate: ‘template<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) const [with _Args = {_Args ...}; _Result = _Result; _Functor = int (*)(int, int, int); _Bound_args = {int}]’
+  operator()(_Args&&... __args) const
+  ^~~~~~~~
+/usr/include/c++/8/functional:491:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/8/functional:509:2: note: candidate: ‘template<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) volatile [with _Args = {_Args ...}; _Result = _Result; _Functor = int (*)(int, int, int); _Bound_args = {int}]’
+  operator()(_Args&&... __args) volatile
+  ^~~~~~~~
+/usr/include/c++/8/functional:509:2: note:   template argument deduction/substitution failed:
+/usr/include/c++/8/functional:521:2: note: candidate: ‘template<class ... _Args, class _Result> _Result std::_Bind<_Functor(_Bound_args ...)>::operator()(_Args&& ...) const volatile [with _Args = {_Args ...}; _Result = _Result; _Functor = int (*)(int, int, int); _Bound_args = {int}]’
+  operator()(_Args&&... __args) const volatile
+  ^~~~~~~~
+/usr/include/c++/8/functional:521:2: note:   template argument deduction/substitution failed:
+
+
+
+TEST #34 succeeded
+File: "tests\\Bind - Maksim Surkov\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:758:7: error: static_assert failed "Wrong number of arguments for function"
+      static_assert(sizeof...(_BoundArgs) == sizeof...(_Args),
+      ^             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:788:7: note: in instantiation of template class 'std::_Bind_check_arity<int (*)(int, int, int), int>' requested here
+    : _Bind_check_arity<typename decay<_Func>::type, _BoundArgs...>
+      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:807:5: note: in instantiation of template class 'std::_Bind_helper<false, int (&)(int, int, int), int>' requested here
+    _Bind_helper<__is_socketlike<_Func>::value, _Func, _BoundArgs...>::type
+    ^
+tests/Bind - Maksim Surkov/003e.cpp:12:19: note: while substituting deduced template arguments into function template 'bind' [with _Func = int (&)(int, int, int), _BoundArgs = <int>]
+    auto binded = std::bind(fun, 1);
+                  ^
+tests/Bind - Maksim Surkov/003e.cpp:12:19: error: no matching function for call to 'bind'
+    auto binded = std::bind(fun, 1);
+                  ^~~~~~~~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:832:5: note: candidate template ignored: couldn't infer template argument '_Result'
+    bind(_Func&& __f, _BoundArgs&&... __args)
+    ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:808:5: note: candidate template ignored: substitution failure [with _Func = int (&)(int, int, int), _BoundArgs = <int>]
+    bind(_Func&& __f, _BoundArgs&&... __args)
+    ^
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Bind - Maksim Surkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #35 succeeded
+File: "tests\\Bind - Maksim Surkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #36 succeeded
+File: "tests\\Bind - Maksim Surkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Bind - Maksim Surkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #37 succeeded
+File: "tests\\Bind - Maksim Surkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #38 succeeded
+File: "tests\\Bind - Maksim Surkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Concurrency - Maksim Surkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Concurrency - Maksim Surkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #39 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/ccJK48O8.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
+001.cpp:(.text._ZNSt6threadC2IRFviEJiEEEOT_DpOT0_[_ZNSt6threadC5IRFviEJiEEEOT_DpOT0_]+0x33): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+
+
+
+TEST #40 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/001-0f9b65.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
+001.cpp:(.text._ZNSt6threadC2IRFviEJiEEEOT_DpOT0_[_ZNSt6threadC2IRFviEJiEEEOT_DpOT0_]+0x28): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Concurrency - Maksim Surkov\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #41 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/ccBbrBhr.o: In function `std::thread::thread<void (&)()>(void (&)())':
+002e.cpp:(.text._ZNSt6threadC2IRFvvEJEEEOT_DpOT0_[_ZNSt6threadC5IRFvvEJEEEOT_DpOT0_]+0x2f): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+
+
+
+TEST #42 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Concurrency - Maksim Surkov/002e.cpp:6:5: warning: expression result unused [-Wunused-value]
+    1; // something useless
+    ^
+1 warning generated.
+/tmp/002e-f9cfb9.o: In function `std::thread::thread<void (&)()>(void (&)())':
+002e.cpp:(.text._ZNSt6threadC2IRFvvEJEEEOT_DpOT0_[_ZNSt6threadC2IRFvvEJEEEOT_DpOT0_]+0x24): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Concurrency - Maksim Surkov\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #43 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/ccqcvVcx.o: In function `std::thread::thread<main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2]>(main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2])':
+003.cpp:(.text+0x375): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+
+
+
+TEST #44 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/003-269272.o: In function `std::thread::thread<main::$_0&, char const (&) [2]>(main::$_0&, char const (&) [2])':
+003.cpp:(.text+0x2c8): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Concurrency - Maksim Surkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #45 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/ccz57frV.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
+004.cpp:(.text._ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_[_ZNSt6threadC5IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_]+0x33): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+
+
+
+TEST #46 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+/tmp/004-178f6f.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
+004.cpp:(.text._ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_[_ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_]+0x28): undefined reference to `pthread_create'
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Concurrency - Maksim Surkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #47 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Concurrency - Maksim Surkov/005.cpp:5:10: fatal error: execution: No such file or directory
+ #include <execution>
+          ^~~~~~~~~~~
+compilation terminated.
+
+
+
+TEST #48 succeeded
+File: "tests\\Concurrency - Maksim Surkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Concurrency - Maksim Surkov/005.cpp:5:10: fatal error: 'execution' file not found
+#include <execution>
+         ^~~~~~~~~~~
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Conditions in if - Alexey Astakhov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Conditions in if - Alexey Astakhov\\if1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #49 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #50 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Conditions in if - Alexey Astakhov\\if2.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #51 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if2.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Conditions in if - Alexey Astakhov/if2.cpp: In function ‘auto& get(S&)’:
+tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: ‘struct S’ has no member named ‘s’
+   return s.s;
+            ^
+
+
+
+TEST #52 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if2.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: no member named 's' in 'S'
+                return s.s;
+                       ~ ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Conditions in if - Alexey Astakhov\\if3e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #53 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if3e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Conditions in if - Alexey Astakhov/if3e.cpp: In function ‘auto& get(S&)’:
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:21:12: error: ‘struct S’ has no member named ‘s’
+   return s.s;
+            ^
+tests/Conditions in if - Alexey Astakhov/if3e.cpp: In instantiation of ‘auto& get(S&) [with long unsigned int I = 1]’:
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:26:36:   required from here
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:22:1: error: no return statements in function returning ‘auto&’
+ }
+ ^
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:22:1: note: only plain ‘auto’ return type can be deduced to ‘void’
+tests/Conditions in if - Alexey Astakhov/if3e.cpp: In function ‘int main()’:
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:26:36: error: use of ‘auto& get(S&) [with long unsigned int I = 1]’ before deduction of ‘auto’
+  if (get<0>(obj) == 0 && get<1>(obj) == 10.0f)
+                                    ^
+
+
+
+TEST #54 succeeded
+File: "tests\\Conditions in if - Alexey Astakhov\\if3e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:21:12: error: no member named 's' in 'S'
+                return s.s;
+                       ~ ^
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:16:7: error: cannot deduce return type 'auto &' for function with no return statements
+auto& get(S& s)
+      ^
+tests/Conditions in if - Alexey Astakhov/if3e.cpp:26:26: note: in instantiation of function template specialization 'get<1>' requested here
+        if (get<0>(obj) == 0 && get<1>(obj) == 10.0f)
+                                ^
+2 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Constexpr - Bulat Khabirov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #55 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #56 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #57 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/002e.cpp:14:32: error: call to non-‘constexpr’ function ‘int getSomeInt()’
+ constexpr int five = getSomeInt();
+                      ~~~~~~~~~~^~
+tests/Constexpr - Bulat Khabirov/002e.cpp:17:29: error: the type ‘const string’ {aka ‘const std::__cxx11::basic_string<char>’} of ‘constexpr’ variable ‘str’ is not literal
+ constexpr std::string str = "Hello!";
+                             ^~~~~~~~
+In file included from /usr/include/c++/8/string:52,
+                 from tests/Constexpr - Bulat Khabirov/002e.cpp:9:
+/usr/include/c++/8/bits/basic_string.h:77:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+     class basic_string
+           ^~~~~~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:77:11: note:   ‘std::__cxx11::basic_string<char>’ has a non-trivial destructor
+tests/Constexpr - Bulat Khabirov/002e.cpp:20:15: error: uninitialized const ‘lazyFour’ [-fpermissive]
+ constexpr int lazyFour;
+               ^~~~~~~~
+tests/Constexpr - Bulat Khabirov/002e.cpp: In function ‘int main()’:
+tests/Constexpr - Bulat Khabirov/002e.cpp:23:23: error: non-constant condition for static assertion
+     static_assert(str == "Hello!");
+                   ~~~~^~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/002e.cpp:23:23: error: call to non-‘constexpr’ function ‘bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*) [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’
+tests/Constexpr - Bulat Khabirov/002e.cpp:24:26: error: assignment of read-only variable ‘five’
+     static_assert(five = 5);
+                          ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:26:16: error: assignment of read-only variable ‘lazyFour’
+     lazyFour = 4;
+                ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:27:28: error: non-constant condition for static assertion
+     static_assert(lazyFour == 4);
+                   ~~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/002e.cpp:27:28: error: the value of ‘lazyFour’ is not usable in a constant expression
+tests/Constexpr - Bulat Khabirov/002e.cpp:20:15: note: ‘lazyFour’ used in its own initializer
+ constexpr int lazyFour;
+               ^~~~~~~~
+
+
+
+TEST #58 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/002e.cpp:14:15: error: constexpr variable 'five' must be initialized by a constant expression
+constexpr int five = getSomeInt();
+              ^      ~~~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/002e.cpp:14:22: note: non-constexpr function 'getSomeInt' cannot be used in a constant expression
+constexpr int five = getSomeInt();
+                     ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:11:5: note: declared here
+int getSomeInt() { return 5; }
+    ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:17:23: error: constexpr variable cannot have non-literal type 'const std::string' (aka 'const basic_string<char>')
+constexpr std::string str = "Hello!";
+                      ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/basic_string.h:77:11: note: 'basic_string<char, std::char_traits<char>, std::allocator<char> >' is not literal because it is not an aggregate and has no constexpr constructors other than copy or move constructors
+    class basic_string
+          ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:20:15: error: default initialization of an object of const type 'const int'
+constexpr int lazyFour;
+              ^
+                       = 0
+tests/Constexpr - Bulat Khabirov/002e.cpp:24:23: error: expected ','
+    static_assert(five = 5);
+                      ^
+                      ,
+tests/Constexpr - Bulat Khabirov/002e.cpp:24:27: error: expected expression
+    static_assert(five = 5);
+                          ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:26:14: error: cannot assign to variable 'lazyFour' with const-qualified type 'const int'
+    lazyFour = 4;
+    ~~~~~~~~ ^
+tests/Constexpr - Bulat Khabirov/002e.cpp:20:15: note: variable 'lazyFour' declared const here
+constexpr int lazyFour;
+~~~~~~~~~~~~~~^~~~~~~~
+tests/Constexpr - Bulat Khabirov/002e.cpp:27:5: error: static_assert failed
+    static_assert(lazyFour == 4);
+    ^             ~~~~~~~~~~~~~
+7 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #59 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int sum(int, int)’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:17:1: error: the value of ‘x’ is not usable in a constant expression
+ }
+ ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:11:5: note: ‘int x’ is not const
+ int x = 5;
+     ^
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int throwExcept()’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:27:11: error: expression ‘<throw-expression>’ is not a constant expression
+     throw 1; // though try-catch is now allowed in c++20, we may not throw
+           ^
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int uninitializedDefinitions()’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:33:9: error: uninitialized variable ‘x’ in ‘constexpr’ function
+     int x;
+         ^
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int nextX()’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:39:16: error: ‘x’ declared ‘static’ in ‘constexpr’ function
+     static int x = -1;
+                ^
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr bool isInnopolis(std::__cxx11::string)’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:46:16: error: invalid type for parameter 1 of ‘constexpr’ function ‘constexpr bool isInnopolis(std::__cxx11::string)’
+ constexpr bool isInnopolis(std::string str) {
+                ^~~~~~~~~~~
+In file included from /usr/include/c++/8/string:52,
+                 from tests/Constexpr - Bulat Khabirov/003e.cpp:9:
+/usr/include/c++/8/bits/basic_string.h:77:11: note: ‘std::__cxx11::basic_string<char>’ is not literal because:
+     class basic_string
+           ^~~~~~~~~~~~
+/usr/include/c++/8/bits/basic_string.h:77:11: note:   ‘std::__cxx11::basic_string<char>’ has a non-trivial destructor
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr bool declareStrAndReturnTrue()’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:52:23: error: variable ‘str’ of non-literal type ‘std::__cxx11::string’ {aka ‘std::__cxx11::basic_string<char>’} in ‘constexpr’ function
+     std::string str = "test";
+                       ^~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int sumFive(int)’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:58:46: error: call to non-‘constexpr’ function ‘int getFive()’
+ constexpr int sumFive(int a) { return getFive() + a; }
+                                       ~~~~~~~^~
+tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘int main()’:
+tests/Constexpr - Bulat Khabirov/003e.cpp:61:29: error: non-constant condition for static assertion
+     static_assert(sum(3, 2) == 5);
+                   ~~~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:61:22: error: ‘constexpr int sum(int, int)’ called in a constant expression
+     static_assert(sum(3, 2) == 5);
+                   ~~~^~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:62:46: error: non-constant condition for static assertion
+     static_assert(uninitializedDefinitions() == 0);
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:62:43: error: ‘constexpr int uninitializedDefinitions()’ called in a constant expression
+     static_assert(uninitializedDefinitions() == 0);
+                   ~~~~~~~~~~~~~~~~~~~~~~~~^~
+tests/Constexpr - Bulat Khabirov/003e.cpp:63:33: error: non-constant condition for static assertion
+     static_assert(throwExcept() == 0);
+                   ~~~~~~~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:63:30: error: ‘constexpr int throwExcept()’ called in a constant expression
+     static_assert(throwExcept() == 0);
+                   ~~~~~~~~~~~^~
+tests/Constexpr - Bulat Khabirov/003e.cpp:64:27: error: non-constant condition for static assertion
+     static_assert(nextX() == 0);
+                   ~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:64:24: error: ‘constexpr int nextX()’ called in a constant expression
+     static_assert(nextX() == 0);
+                   ~~~~~^~
+tests/Constexpr - Bulat Khabirov/003e.cpp:65:30: error: non-constant condition for static assertion
+     static_assert(sumFive(1) == 6);
+                   ~~~~~~~~~~~^~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:65:26: error: ‘constexpr int sumFive(int)’ called in a constant expression
+     static_assert(sumFive(1) == 6);
+                   ~~~~~~~^~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:66:30: error: non-constant condition for static assertion
+     static_assert(isInnopolis("Innopolis"));
+                   ~~~~~~~~~~~^~~~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:66:30: error: temporary of non-literal type ‘std::__cxx11::string’ {aka ‘std::__cxx11::basic_string<char>’} in a constant expression
+tests/Constexpr - Bulat Khabirov/003e.cpp:67:42: error: non-constant condition for static assertion
+     static_assert(declareStrAndReturnTrue());
+                   ~~~~~~~~~~~~~~~~~~~~~~~^~
+tests/Constexpr - Bulat Khabirov/003e.cpp:67:42: error: ‘constexpr bool declareStrAndReturnTrue()’ called in a constant expression
+tests/Constexpr - Bulat Khabirov/003e.cpp:71:21: error: non-constant condition for static assertion
+     static_assert(x == 10);
+                   ~~^~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:71:21: error: the value of ‘x’ is not usable in a constant expression
+tests/Constexpr - Bulat Khabirov/003e.cpp:69:9: note: ‘int x’ is not const
+     int x = 5;
+         ^
+
+
+
+TEST #60 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/003e.cpp:12:15: error: constexpr function never produces a constant expression [-Winvalid-constexpr]
+constexpr int sum(int a, int b) {
+              ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:14:9: note: read of non-const variable 'x' is not allowed in a constant expression
+    if (x == 5)
+        ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:11:5: note: declared here
+int x = 5;
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:26:15: error: constexpr function never produces a constant expression [-Winvalid-constexpr]
+constexpr int throwExcept() noexcept(false) {
+              ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:27:5: note: subexpression not valid in a constant expression
+    throw 1; // though try-catch is now allowed in c++20, we may not throw
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:33:9: error: variables defined in a constexpr function must be initialized
+    int x;
+        ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:39:16: error: static variable not permitted in a constexpr function
+    static int x = -1;
+               ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:46:40: error: constexpr function's 1st parameter type 'std::string' (aka 'basic_string<char>') is not a literal type
+constexpr bool isInnopolis(std::string str) {
+                           ~~~~~~~~~~~~^~~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/basic_string.h:77:11: note: 'basic_string<char, std::char_traits<char>, std::allocator<char> >' is not literal because it is not an aggregate and has no constexpr constructors other than copy or move constructors
+    class basic_string
+          ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:52:17: error: variable of non-literal type 'std::string' (aka 'basic_string<char>') cannot be defined in a constexpr function
+    std::string str = "test";
+                ^
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/basic_string.h:77:11: note: 'basic_string<char, std::char_traits<char>, std::allocator<char> >' is not literal because it is not an aggregate and has no constexpr constructors other than copy or move constructors
+    class basic_string
+          ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:58:15: error: constexpr function never produces a constant expression [-Winvalid-constexpr]
+constexpr int sumFive(int a) { return getFive() + a; }
+              ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:58:39: note: non-constexpr function 'getFive' cannot be used in a constant expression
+constexpr int sumFive(int a) { return getFive() + a; }
+                                      ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:56:5: note: declared here
+int getFive() { return 5; }
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:61:19: error: static_assert expression is not an integral constant expression
+    static_assert(sum(3, 2) == 5);
+                  ^~~~~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:14:9: note: read of non-const variable 'x' is not allowed in a constant expression
+    if (x == 5)
+        ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:61:19: note: in call to 'sum(3, 2)'
+    static_assert(sum(3, 2) == 5);
+                  ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:11:5: note: declared here
+int x = 5;
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:63:19: error: static_assert expression is not an integral constant expression
+    static_assert(throwExcept() == 0);
+                  ^~~~~~~~~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:27:5: note: subexpression not valid in a constant expression
+    throw 1; // though try-catch is now allowed in c++20, we may not throw
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:63:19: note: in call to 'throwExcept()'
+    static_assert(throwExcept() == 0);
+                  ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:65:19: error: static_assert expression is not an integral constant expression
+    static_assert(sumFive(1) == 6);
+                  ^~~~~~~~~~~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:58:39: note: non-constexpr function 'getFive' cannot be used in a constant expression
+constexpr int sumFive(int a) { return getFive() + a; }
+                                      ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:65:19: note: in call to 'sumFive(1)'
+    static_assert(sumFive(1) == 6);
+                  ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:56:5: note: declared here
+int getFive() { return 5; }
+    ^
+tests/Constexpr - Bulat Khabirov/003e.cpp:71:19: error: static_assert expression is not an integral constant expression
+    static_assert(x == 10);
+                  ^~~~~~~
+tests/Constexpr - Bulat Khabirov/003e.cpp:71:19: note: read of non-const variable 'x' is not allowed in a constant expression
+tests/Constexpr - Bulat Khabirov/003e.cpp:69:9: note: declared here
+    int x = 5;
+        ^
+11 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #61 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #62 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #63 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/005.cpp: In function ‘int main()’:
+tests/Constexpr - Bulat Khabirov/005.cpp:22:33: error: passing ‘const Rectangle’ as ‘this’ argument discards qualifiers [-fpermissive]
+     int rectArea = rect.getArea();
+                                 ^
+tests/Constexpr - Bulat Khabirov/005.cpp:16:19: note:   in call to ‘constexpr int Rectangle::getArea()’
+     constexpr int getArea ()  { return h * w; }
+                   ^~~~~~~
+tests/Constexpr - Bulat Khabirov/005.cpp:23:5: error: ‘assert’ was not declared in this scope
+     assert(rectArea == 10*20);
+     ^~~~~~
+tests/Constexpr - Bulat Khabirov/005.cpp:23:5: note: ‘assert’ is defined in header ‘<cassert>’; did you forget to ‘#include <cassert>’?
+tests/Constexpr - Bulat Khabirov/005.cpp:1:1:
++#include <cassert>
+ /**
+tests/Constexpr - Bulat Khabirov/005.cpp:23:5:
+     assert(rectArea == 10*20);
+     ^~~~~~
+
+
+
+TEST #64 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/005.cpp:22:20: error: 'this' argument to member function 'getArea' has type 'const Rectangle', but function is not marked const
+    int rectArea = rect.getArea();
+                   ^~~~
+tests/Constexpr - Bulat Khabirov/005.cpp:16:19: note: 'getArea' declared here
+    constexpr int getArea ()  { return h * w; }
+                  ^
+tests/Constexpr - Bulat Khabirov/005.cpp:23:5: error: use of undeclared identifier 'assert'
+    assert(rectArea == 10*20);
+    ^
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\006e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #65 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\006e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/006e.cpp: In constructor ‘constexpr Rectangle::Rectangle(int, int)’:
+tests/Constexpr - Bulat Khabirov/006e.cpp:17:51: error: call to non-‘constexpr’ function ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’
+     constexpr Rectangle (int h, int w) : h(h), w(w) {}
+                                                   ^
+tests/Constexpr - Bulat Khabirov/006e.cpp: In constructor ‘constexpr Rectangle2::Rectangle2(int)’:
+tests/Constexpr - Bulat Khabirov/006e.cpp:27:42: error: member ‘Rectangle2::w’ must be initialized by mem-initializer in ‘constexpr’ constructor
+     constexpr Rectangle2 (int h) : h(h) {}
+                                          ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:24:12: note: declared here
+     int h, w;
+            ^
+tests/Constexpr - Bulat Khabirov/006e.cpp: In function ‘int main()’:
+tests/Constexpr - Bulat Khabirov/006e.cpp:33:36: error: the type ‘const Rectangle’ of ‘constexpr’ variable ‘rect’ is not literal
+     constexpr Rectangle rect(10, 20);
+                                    ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:12:7: note: ‘Rectangle’ is not literal because:
+ class Rectangle {
+       ^~~~~~~~~
+tests/Constexpr - Bulat Khabirov/006e.cpp:12:7: note:   ‘Rectangle’ has a non-trivial destructor
+tests/Constexpr - Bulat Khabirov/006e.cpp:34:34: error: ‘constexpr Rectangle2::Rectangle2(int)’ called in a constant expression
+     constexpr Rectangle2 rect2(10);
+                                  ^
+
+
+
+TEST #66 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\006e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constexpr - Bulat Khabirov/006e.cpp:17:15: error: constexpr constructor never produces a constant expression [-Winvalid-constexpr]
+    constexpr Rectangle (int h, int w) : h(h), w(w) {}
+              ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:17:15: note: non-constexpr constructor 'basic_string' cannot be used in a constant expression
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/basic_string.h:420:7: note: declared here
+      basic_string()
+      ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:27:15: error: constexpr constructor must initialize all members
+    constexpr Rectangle2 (int h) : h(h) {}
+              ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:24:12: note: member not initialized by constructor
+    int h, w;
+           ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:33:25: error: constexpr variable cannot have non-literal type 'const Rectangle'
+    constexpr Rectangle rect(10, 20);
+                        ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:14:17: note: 'Rectangle' is not literal because it has data member 'name' of non-literal type 'std::string' (aka 'basic_string<char>')
+    std::string name;
+                ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:34:26: error: no matching constructor for initialization of 'const Rectangle2'
+    constexpr Rectangle2 rect2(10);
+                         ^     ~~
+tests/Constexpr - Bulat Khabirov/006e.cpp:23:7: note: candidate constructor (the implicit copy constructor) not viable: no known conversion from 'int' to 'const Rectangle2' for 1st argument
+class Rectangle2 {
+      ^
+tests/Constexpr - Bulat Khabirov/006e.cpp:23:7: note: candidate constructor (the implicit move constructor) not viable: no known conversion from 'int' to 'Rectangle2' for 1st argument
+class Rectangle2 {
+      ^
+4 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\007.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #67 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\007.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #68 succeeded
+File: "tests\\Constexpr - Bulat Khabirov\\007.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constexpr - Bulat Khabirov\\008e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #69 FAILED
+File: "tests\\Constexpr - Bulat Khabirov\\008e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #70 FAILED
+File: "tests\\Constexpr - Bulat Khabirov\\008e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Constructors - Anton Prokopev" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #71 succeeded
+File: "tests\\Constructors - Anton Prokopev\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #72 succeeded
+File: "tests\\Constructors - Anton Prokopev\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #73 FAILED
+File: "tests\\Constructors - Anton Prokopev\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #74 succeeded
+File: "tests\\Constructors - Anton Prokopev\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/002e.cpp:7:14: error: constructor for 'C' creates a delegation cycle [-Wdelegating-ctor-cycles]
+  C(int i) : C() {}
+             ^
+tests/Constructors - Anton Prokopev/002e.cpp:5:3: note: it delegates to
+  C() : C(12) {}
+  ^
+tests/Constructors - Anton Prokopev/002e.cpp:7:3: note: which delegates to
+  C(int i) : C() {}
+  ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #75 succeeded
+File: "tests\\Constructors - Anton Prokopev\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #76 succeeded
+File: "tests\\Constructors - Anton Prokopev\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #77 succeeded
+File: "tests\\Constructors - Anton Prokopev\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #78 succeeded
+File: "tests\\Constructors - Anton Prokopev\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\005e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #79 FAILED
+File: "tests\\Constructors - Anton Prokopev\\005e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d1.a == 1' failed.
+
+
+
+TEST #80 FAILED
+File: "tests\\Constructors - Anton Prokopev\\005e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d1.a == 1' failed.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\006.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #81 succeeded
+File: "tests\\Constructors - Anton Prokopev\\006.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/006.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/006.cpp:20:29: error: no matching function for call to ‘Derived::Derived(int, bool)’
+   Derived d1(5), d2(12, true);
+                             ^
+tests/Constructors - Anton Prokopev/006.cpp:14:12: note: candidate: ‘Derived::Derived(int)’
+   explicit Derived(int x) : Base(1) { this->a = x; }
+            ^~~~~~~
+tests/Constructors - Anton Prokopev/006.cpp:14:12: note:   candidate expects 1 argument, 2 provided
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note: candidate: ‘constexpr Derived::Derived(const Derived&)’
+ class Derived : public Base {
+       ^~~~~~~
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note:   candidate expects 1 argument, 2 provided
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note: candidate: ‘constexpr Derived::Derived(Derived&&)’
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note:   candidate expects 1 argument, 2 provided
+
+
+
+TEST #82 succeeded
+File: "tests\\Constructors - Anton Prokopev\\006.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/006.cpp:20:18: error: no matching constructor for initialization of 'Derived'
+  Derived d1(5), d2(12, true);
+                 ^  ~~~~~~~~
+tests/Constructors - Anton Prokopev/006.cpp:14:12: note: candidate constructor not viable: requires single argument 'x', but 2 arguments were provided
+  explicit Derived(int x) : Base(1) { this->a = x; }
+           ^
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 2 were provided
+class Derived : public Base {
+      ^
+tests/Constructors - Anton Prokopev/006.cpp:12:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 2 were provided
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\007.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #83 succeeded
+File: "tests\\Constructors - Anton Prokopev\\007.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #84 succeeded
+File: "tests\\Constructors - Anton Prokopev\\007.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\008e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #85 FAILED
+File: "tests\\Constructors - Anton Prokopev\\008e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x.a == 3' failed.
+
+
+
+TEST #86 FAILED
+File: "tests\\Constructors - Anton Prokopev\\008e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x.a == 3' failed.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\009e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #87 succeeded
+File: "tests\\Constructors - Anton Prokopev\\009e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/009e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/009e.cpp:14:10: error: use of deleted function ‘Q::Q(Q&)’
+   Q q2(q1);
+          ^
+tests/Constructors - Anton Prokopev/009e.cpp:6:3: note: declared here
+   Q(Q &q) = delete;
+   ^
+
+
+
+TEST #88 succeeded
+File: "tests\\Constructors - Anton Prokopev\\009e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/009e.cpp:14:5: error: call to deleted constructor of 'Q'
+  Q q2(q1);
+    ^  ~~
+tests/Constructors - Anton Prokopev/009e.cpp:6:3: note: 'Q' has been explicitly marked deleted here
+  Q(Q &q) = delete;
+  ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\010e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #89 succeeded
+File: "tests\\Constructors - Anton Prokopev\\010e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/010e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/010e.cpp:15:12: error: use of deleted function ‘QDerived::QDerived()’
+   QDerived q1;
+            ^~
+tests/Constructors - Anton Prokopev/010e.cpp:10:7: note: ‘QDerived::QDerived()’ is implicitly deleted because the default definition would be ill-formed:
+ class QDerived : Q {
+       ^~~~~~~~
+tests/Constructors - Anton Prokopev/010e.cpp:10:7: error: use of deleted function ‘Q::Q()’
+tests/Constructors - Anton Prokopev/010e.cpp:6:3: note: declared here
+   Q() = delete;
+   ^
+
+
+
+TEST #90 succeeded
+File: "tests\\Constructors - Anton Prokopev\\010e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/010e.cpp:15:12: error: call to implicitly-deleted default constructor of 'QDerived'
+  QDerived q1;
+           ^
+tests/Constructors - Anton Prokopev/010e.cpp:10:18: note: default constructor of 'QDerived' is implicitly deleted because base class 'Q' has a deleted default constructor
+class QDerived : Q {
+                 ^
+tests/Constructors - Anton Prokopev/010e.cpp:6:3: note: 'Q' has been explicitly marked deleted here
+  Q() = delete;
+  ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\011e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #91 succeeded
+File: "tests\\Constructors - Anton Prokopev\\011e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/011e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/011e.cpp:16:12: error: use of deleted function ‘QDerived::QDerived()’
+   QDerived q1;
+            ^~
+tests/Constructors - Anton Prokopev/011e.cpp:12:3: note: ‘QDerived::QDerived()’ is implicitly deleted because the default definition would be ill-formed:
+   QDerived() = default;
+   ^~~~~~~~
+tests/Constructors - Anton Prokopev/011e.cpp:12:3: error: use of deleted function ‘Q::Q()’
+tests/Constructors - Anton Prokopev/011e.cpp:5:3: note: declared here
+   Q() = delete;
+   ^
+
+
+
+TEST #92 succeeded
+File: "tests\\Constructors - Anton Prokopev\\011e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/011e.cpp:16:12: error: call to implicitly-deleted default constructor of 'QDerived'
+  QDerived q1;
+           ^
+tests/Constructors - Anton Prokopev/011e.cpp:12:3: note: explicitly defaulted function was implicitly deleted here
+  QDerived() = default;
+  ^
+tests/Constructors - Anton Prokopev/011e.cpp:9:18: note: default constructor of 'QDerived' is implicitly deleted because base class 'Q' has a deleted default constructor
+class QDerived : Q {
+                 ^
+tests/Constructors - Anton Prokopev/011e.cpp:5:3: note: 'Q' has been explicitly marked deleted here
+  Q() = delete;
+  ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\012.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #93 succeeded
+File: "tests\\Constructors - Anton Prokopev\\012.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #94 succeeded
+File: "tests\\Constructors - Anton Prokopev\\012.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\013.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #95 succeeded
+File: "tests\\Constructors - Anton Prokopev\\013.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #96 succeeded
+File: "tests\\Constructors - Anton Prokopev\\013.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\014e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #97 succeeded
+File: "tests\\Constructors - Anton Prokopev\\014e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/014e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/014e.cpp:12:22: error: could not convert ‘{1, 2.0e+0, 3, ""}’ from ‘<brace-enclosed initializer list>’ to ‘R’
+   R r = {1, 2., 3, ""};
+                      ^
+
+
+
+TEST #98 succeeded
+File: "tests\\Constructors - Anton Prokopev\\014e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/014e.cpp:12:5: error: no matching constructor for initialization of 'R'
+  R r = {1, 2., 3, ""};
+    ^   ~~~~~~~~~~~~~~
+tests/Constructors - Anton Prokopev/014e.cpp:6:3: note: candidate constructor not viable: requires single argument 'args', but 4 arguments were provided
+  R(std::initializer_list<double> args) {
+  ^
+tests/Constructors - Anton Prokopev/014e.cpp:4:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 4 were provided
+class R {
+      ^
+tests/Constructors - Anton Prokopev/014e.cpp:4:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 4 were provided
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\015.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #99 succeeded
+File: "tests\\Constructors - Anton Prokopev\\015.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #100 succeeded
+File: "tests\\Constructors - Anton Prokopev\\015.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\016e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #101 succeeded
+File: "tests\\Constructors - Anton Prokopev\\016e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/016e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/016e.cpp:12:16: error: no matching function for call to ‘R::R(int, int, double)’
+   R r(1, 2, 4.5);
+                ^
+tests/Constructors - Anton Prokopev/016e.cpp:6:3: note: candidate: ‘R::R(std::initializer_list<double>)’
+   R(std::initializer_list<double> args) {
+   ^
+tests/Constructors - Anton Prokopev/016e.cpp:6:3: note:   candidate expects 1 argument, 3 provided
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note: candidate: ‘constexpr R::R(const R&)’
+ class R {
+       ^
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note:   candidate expects 1 argument, 3 provided
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note: candidate: ‘constexpr R::R(R&&)’
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note:   candidate expects 1 argument, 3 provided
+
+
+
+TEST #102 succeeded
+File: "tests\\Constructors - Anton Prokopev\\016e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/016e.cpp:12:5: error: no matching constructor for initialization of 'R'
+  R r(1, 2, 4.5);
+    ^ ~~~~~~~~~
+tests/Constructors - Anton Prokopev/016e.cpp:6:3: note: candidate constructor not viable: requires single argument 'args', but 3 arguments were provided
+  R(std::initializer_list<double> args) {
+  ^
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class R {
+      ^
+tests/Constructors - Anton Prokopev/016e.cpp:4:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Constructors - Anton Prokopev\\017e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #103 succeeded
+File: "tests\\Constructors - Anton Prokopev\\017e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/017e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/017e.cpp:11:10: error: expected identifier before numeric constant
+   R r = [1, 3, 5];
+          ^
+tests/Constructors - Anton Prokopev/017e.cpp:11:11: error: expected ‘]’ before ‘,’ token
+   R r = [1, 3, 5];
+           ^
+           ]
+tests/Constructors - Anton Prokopev/017e.cpp: In lambda function:
+tests/Constructors - Anton Prokopev/017e.cpp:11:11: error: expected ‘{’ before ‘,’ token
+tests/Constructors - Anton Prokopev/017e.cpp: In function ‘int main()’:
+tests/Constructors - Anton Prokopev/017e.cpp:11:11: error: conversion from ‘main()::<lambda()>’ to non-scalar type ‘R’ requested
+tests/Constructors - Anton Prokopev/017e.cpp:11:13: error: expected unqualified-id before numeric constant
+   R r = [1, 3, 5];
+             ^
+
+
+
+TEST #104 succeeded
+File: "tests\\Constructors - Anton Prokopev\\017e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Constructors - Anton Prokopev/017e.cpp:11:10: error: expected variable name or 'this' in lambda capture list
+  R r = [1, 3, 5];
+         ^
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Decltype specifier - Alexey Astakhov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #105 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #106 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype2.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #107 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype2.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #108 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype2.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype3.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #109 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype3.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #110 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype3.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype4e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #111 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype4e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp: In function ‘int main()’:
+tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:17:15: error: decltype cannot resolve address of overloaded function
+  decltype(func) var1;
+               ^
+
+
+
+TEST #112 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype4e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:17:11: error: reference to overloaded function could not be resolved; did you mean to call it with no arguments?
+        decltype(func) var1;
+                 ^~~~
+                     ()
+tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:11:5: note: possible target for call
+int func(int a) {
+    ^
+tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:8:5: note: possible target for call
+int func() {
+    ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype5.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #113 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype5.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #114 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype5.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype6.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #115 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype6.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #116 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype6.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype7.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #117 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype7.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #118 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype7.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype8e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #119 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype8e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp: In function ‘int main()’:
+tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:21: error: array must be initialized with a brace-enclosed initializer
+  decltype(auto) c = a;
+                     ^
+
+
+
+TEST #120 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype8e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:17: error: array initializer must be an initializer list
+        decltype(auto) c = a;
+                       ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Decltype specifier - Alexey Astakhov\\decltype9.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #121 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype9.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #122 succeeded
+File: "tests\\Decltype specifier - Alexey Astakhov\\decltype9.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Default&Delete - Dmitry Turenko" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #123 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #124 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\2e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #125 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\2e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/2e.cpp: In function ‘int test_delete_behavior()’:
+tests/Default&Delete - Dmitry Turenko/2e.cpp:12:7: error: use of deleted function ‘test_delete_behavior()::C::C()’
+     C c;
+       ^
+tests/Default&Delete - Dmitry Turenko/2e.cpp:9:9: note: declared here
+         C() = delete;
+         ^
+
+
+
+TEST #126 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\2e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/2e.cpp:12:7: error: call to deleted constructor of 'C'
+    C c;
+      ^
+tests/Default&Delete - Dmitry Turenko/2e.cpp:9:9: note: 'C' has been explicitly marked deleted here
+        C() = delete;
+        ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\3e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #127 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\3e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/3e.cpp: In function ‘int test_delete_function()’:
+tests/Default&Delete - Dmitry Turenko/3e.cpp:20:11: error: use of deleted function ‘int test_delete_function()::D::f(int)’
+     d.f(10);
+           ^
+tests/Default&Delete - Dmitry Turenko/3e.cpp:14:13: note: declared here
+         int f(int x) = delete;
+             ^
+
+
+
+TEST #128 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\3e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/3e.cpp:20:7: error: attempt to use a deleted function
+    d.f(10);
+      ^
+tests/Default&Delete - Dmitry Turenko/3e.cpp:14:13: note: 'f' has been explicitly marked deleted here
+        int f(int x) = delete;
+            ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\4e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #129 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\4e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/4e.cpp: In function ‘int test_prohibit_type()’:
+tests/Default&Delete - Dmitry Turenko/4e.cpp:17:20: error: use of deleted function ‘int test_prohibit_type()::C::make_action(double)’
+     c.make_action(d);
+                    ^
+tests/Default&Delete - Dmitry Turenko/4e.cpp:10:13: note: declared here
+         int make_action(double x) = delete;
+             ^~~~~~~~~~~
+
+
+
+TEST #130 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\4e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/4e.cpp:17:7: error: call to deleted member function 'make_action'
+    c.make_action(d);
+    ~~^~~~~~~~~~~
+tests/Default&Delete - Dmitry Turenko/4e.cpp:10:13: note: candidate function has been explicitly deleted
+        int make_action(double x) = delete;
+            ^
+tests/Default&Delete - Dmitry Turenko/4e.cpp:9:13: note: candidate function
+        int make_action(int x) { return x * x; }
+            ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\5e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #131 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\5e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/5e.cpp: In function ‘int test_prohibit_some_template_inst()’:
+tests/Default&Delete - Dmitry Turenko/5e.cpp:14:16: error: use of deleted function ‘int f(T) [with T = double]’
+     f(double(t));
+                ^
+tests/Default&Delete - Dmitry Turenko/5e.cpp:8:5: note: declared here
+ int f(T) = delete;
+     ^
+
+
+
+TEST #132 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\5e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/5e.cpp:14:5: error: call to deleted function 'f'
+    f(double(t));
+    ^
+tests/Default&Delete - Dmitry Turenko/5e.cpp:8:5: note: candidate function [with T = double] has been explicitly deleted
+int f(T) = delete;
+    ^
+tests/Default&Delete - Dmitry Turenko/5e.cpp:9:5: note: candidate function
+int f(int x) { return x * x + 1; }
+    ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\6e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #133 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\6e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/6e.cpp: In function ‘int test_restrict_operatot()’:
+tests/Default&Delete - Dmitry Turenko/6e.cpp:13:10: error: use of deleted function ‘test_restrict_operatot()::C& test_restrict_operatot()::C::operator=(const test_restrict_operatot()::C&)’
+     c2 = c1;
+          ^~
+tests/Default&Delete - Dmitry Turenko/6e.cpp:9:12: note: declared here
+         C& operator= (const C&) = delete;
+            ^~~~~~~~
+
+
+
+TEST #134 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\6e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Default&Delete - Dmitry Turenko/6e.cpp:13:8: error: overload resolution selected deleted operator '='
+    c2 = c1;
+    ~~ ^ ~~
+tests/Default&Delete - Dmitry Turenko/6e.cpp:9:12: note: candidate function has been explicitly deleted
+        C& operator= (const C&) = delete;     
+           ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Default&Delete - Dmitry Turenko\\7.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #135 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\7.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #136 succeeded
+File: "tests\\Default&Delete - Dmitry Turenko\\7.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Final - Eduard Zalyaev" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Final - Eduard Zalyaev\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #137 succeeded
+File: "tests\\Final - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #138 succeeded
+File: "tests\\Final - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Final - Eduard Zalyaev\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #139 succeeded
+File: "tests\\Final - Eduard Zalyaev\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/002e.cpp:10:6: error: ‘int A::boo()’ marked ‘final’, but is not virtual
+  int boo() final { return 2020; }
+      ^~~
+
+
+
+TEST #140 succeeded
+File: "tests\\Final - Eduard Zalyaev\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/002e.cpp:10:12: error: only virtual member functions can be marked 'final'
+        int boo() final { return 2020; }
+                  ^~~~~~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Final - Eduard Zalyaev\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #141 succeeded
+File: "tests\\Final - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/003e.cpp:19:6: error: virtual function ‘virtual int C::foo()’ overriding final function
+  int foo() override { return 24; }
+      ^~~
+tests/Final - Eduard Zalyaev/003e.cpp:14:6: note: overridden function is ‘virtual int B::foo()’
+  int foo() final { return 42; }
+      ^~~
+
+
+
+TEST #142 succeeded
+File: "tests\\Final - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/003e.cpp:19:6: error: declaration of 'foo' overrides a 'final' function
+        int foo() override { return 24; }
+            ^
+tests/Final - Eduard Zalyaev/003e.cpp:14:6: note: overridden virtual function is here
+        int foo() final { return 42; }
+            ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Final - Eduard Zalyaev\\004e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #143 succeeded
+File: "tests\\Final - Eduard Zalyaev\\004e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/004e.cpp:12:8: error: cannot derive from ‘final’ base ‘A’ in derived type ‘B’
+ struct B : A
+        ^
+
+
+
+TEST #144 succeeded
+File: "tests\\Final - Eduard Zalyaev\\004e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Final - Eduard Zalyaev/004e.cpp:12:12: error: base 'A' is marked 'final'
+struct B : A
+           ^
+tests/Final - Eduard Zalyaev/004e.cpp:7:8: note: 'A' declared here
+struct A final
+       ^ ~~~~~
+tests/Final - Eduard Zalyaev/004e.cpp:14:12: error: only virtual member functions can be marked 'final'
+        int foo() final { return 42; }
+                  ^~~~~~
+2 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\For conditions - Eduard Zalyaev" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For conditions - Eduard Zalyaev\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #145 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #146 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For conditions - Eduard Zalyaev\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #147 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For conditions - Eduard Zalyaev/002e.cpp: In function ‘int main()’:
+tests/For conditions - Eduard Zalyaev/002e.cpp:11:17: error: could not convert ‘a’ from ‘A’ to ‘bool’
+  for (; A a = A();) return 1;
+                 ^
+
+
+
+TEST #148 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For conditions - Eduard Zalyaev/002e.cpp:11:11: error: value of type 'A' is not contextually convertible to 'bool'
+        for (; A a = A();) return 1;
+                 ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For conditions - Eduard Zalyaev\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #149 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For conditions - Eduard Zalyaev/003e.cpp: In function ‘int main()’:
+tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: error: no match for ‘operator&&’ (operand types are ‘bool’ and ‘A’)
+  for (; (false && a) ;) return 1;
+          ~~~~~~^~~~
+tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: note: candidate: ‘operator&&(bool, bool)’ <built-in>
+tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: note:   no known conversion for argument 2 from ‘A’ to ‘bool’
+
+
+
+TEST #150 succeeded
+File: "tests\\For conditions - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For conditions - Eduard Zalyaev/003e.cpp:12:19: error: value of type 'A' is not contextually convertible to 'bool'
+        for (; (false && a) ;) return 1;
+                         ^
+tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: error: invalid operands to binary expression ('bool' and 'A')
+        for (; (false && a) ;) return 1;
+                ~~~~~ ^  ~
+2 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\For Range - Maksim Surkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\001e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #151 succeeded
+File: "tests\\For Range - Maksim Surkov\\001e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/001e.cpp: In function ‘int main()’:
+tests/For Range - Maksim Surkov/001e.cpp:10:17: error: ‘begin’ was not declared in this scope
+  for (int val : a)
+                 ^
+tests/For Range - Maksim Surkov/001e.cpp:10:17: error: ‘end’ was not declared in this scope
+
+
+
+TEST #152 succeeded
+File: "tests\\For Range - Maksim Surkov\\001e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/001e.cpp:10:15: error: invalid range expression of type 'int *'; no viable 'begin' function available
+        for (int val : a)
+                     ^ ~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\002.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #153 succeeded
+File: "tests\\For Range - Maksim Surkov\\002.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/002.cpp: In function ‘int main()’:
+tests/For Range - Maksim Surkov/002.cpp:10:45: error: found ‘:’ in nested-name-specifier, expected ‘::’
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                             ^
+                                             ::
+tests/For Range - Maksim Surkov/002.cpp:10:37: error: expected primary-expression before ‘int’
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                     ^~~
+tests/For Range - Maksim Surkov/002.cpp:10:36: error: expected ‘;’ before ‘int’
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                    ^~~~
+                                    ;
+tests/For Range - Maksim Surkov/002.cpp:10:37: error: expected primary-expression before ‘int’
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                     ^~~
+tests/For Range - Maksim Surkov/002.cpp:10:36: error: expected ‘)’ before ‘int’
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                 ~                  ^~~~
+                                    )
+tests/For Range - Maksim Surkov/002.cpp:10:41: error: ‘val’ has not been declared
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                         ^~~
+tests/For Range - Maksim Surkov/002.cpp:10:48: error: qualified-id in declaration before ‘)’ token
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                                ^
+tests/For Range - Maksim Surkov/002.cpp:10:2: warning: attributes at the beginning of statement are ignored [-Wattributes]
+  [[likely]] for (int a[] = {2,2,2}; int val : a)
+  ^
+
+
+
+TEST #154 succeeded
+File: "tests\\For Range - Maksim Surkov\\002.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/002.cpp:10:41: error: variable declaration in condition must have an initializer
+        [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                               ^
+tests/For Range - Maksim Surkov/002.cpp:10:45: error: expected ';' in 'for' statement specifier
+        [[likely]] for (int a[] = {2,2,2}; int val : a)
+                                                   ^
+tests/For Range - Maksim Surkov/002.cpp:10:45: error: expected expression
+tests/For Range - Maksim Surkov/002.cpp:10:45: error: expected ')'
+tests/For Range - Maksim Surkov/002.cpp:10:17: note: to match this '('
+        [[likely]] for (int a[] = {2,2,2}; int val : a)
+                       ^
+tests/For Range - Maksim Surkov/002.cpp:10:4: warning: unknown attribute 'likely' ignored [-Wunknown-attributes]
+        [[likely]] for (int a[] = {2,2,2}; int val : a)
+          ^
+1 warning and 4 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #155 succeeded
+File: "tests\\For Range - Maksim Surkov\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #156 succeeded
+File: "tests\\For Range - Maksim Surkov\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #157 succeeded
+File: "tests\\For Range - Maksim Surkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #158 succeeded
+File: "tests\\For Range - Maksim Surkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #159 succeeded
+File: "tests\\For Range - Maksim Surkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #160 succeeded
+File: "tests\\For Range - Maksim Surkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\006.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #161 succeeded
+File: "tests\\For Range - Maksim Surkov\\006.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #162 succeeded
+File: "tests\\For Range - Maksim Surkov\\006.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\007.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #163 succeeded
+File: "tests\\For Range - Maksim Surkov\\007.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #164 succeeded
+File: "tests\\For Range - Maksim Surkov\\007.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\008.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #165 succeeded
+File: "tests\\For Range - Maksim Surkov\\008.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #166 succeeded
+File: "tests\\For Range - Maksim Surkov\\008.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\009e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #167 succeeded
+File: "tests\\For Range - Maksim Surkov\\009e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/009e.cpp: In function ‘int main()’:
+tests/For Range - Maksim Surkov/009e.cpp:10:15: error: increment of read-only reference ‘val’
+   result += ++val;
+               ^~~
+
+
+
+TEST #168 succeeded
+File: "tests\\For Range - Maksim Surkov\\009e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/009e.cpp:10:13: error: cannot assign to variable 'val' with const-qualified type 'const int &'
+                result += ++val;
+                          ^ ~~~
+tests/For Range - Maksim Surkov/009e.cpp:9:13: note: variable 'val' declared const here
+        for (auto& val : {1,2,3,4,5})
+             ~~~~~~^~~~~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\For Range - Maksim Surkov\\010e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #169 succeeded
+File: "tests\\For Range - Maksim Surkov\\010e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/010e.cpp: In function ‘int main()’:
+tests/For Range - Maksim Surkov/010e.cpp:10:18: error: binding reference of type ‘int&’ to ‘const int’ discards qualifiers
+  for (int& val : a)
+                  ^
+
+
+
+TEST #170 succeeded
+File: "tests\\For Range - Maksim Surkov\\010e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/For Range - Maksim Surkov/010e.cpp:10:12: error: binding value of type 'const int' to reference to type 'int' drops 'const' qualifier
+        for (int& val : a)
+                  ^   ~
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Lambda Expressions - Maksim Surkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #171 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #172 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #173 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/002e.cpp: In lambda function:
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:28: error: ‘a’ is not captured
+     auto fun = [](){return a;};
+                            ^
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:17: note: the lambda has no capture-default
+     auto fun = [](){return a;};
+                 ^
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:5:9: note: ‘int a’ declared here
+     int a = 0;
+         ^
+tests/Lambda Expressions - Maksim Surkov/002e.cpp: In function ‘int main()’:
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:7:16: error: void value not ignored as it ought to be
+     return fun();
+                ^
+
+
+
+TEST #174 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:28: error: variable 'a' cannot be implicitly captured in a lambda with no capture-default specified
+    auto fun = [](){return a;};
+                           ^
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:5:9: note: 'a' declared here
+    int a = 0;
+        ^
+tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:16: note: lambda expression begins here
+    auto fun = [](){return a;};
+               ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #175 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #176 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #177 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #178 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #179 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #180 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\006.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #181 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\006.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #182 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\006.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\007.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #183 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\007.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #184 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\007.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/007.cpp:5:20: error: expected body of lambda expression
+auto less_than = []<class T>(T a, auto&& b) { return a < b; };
+                   ^
+tests/Lambda Expressions - Maksim Surkov/007.cpp:5:21: error: expected expression
+auto less_than = []<class T>(T a, auto&& b) { return a < b; };
+                    ^
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\008e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #185 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\008e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/008e.cpp: In lambda function:
+tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:55: error: increment of read-only reference ‘b’
+     int result = [&b = std::as_const(a)]() { return ++b;}();
+                                                       ^
+
+
+
+TEST #186 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\008e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:53: error: cannot assign to a variable captured by copy in a non-mutable lambda
+    int result = [&b = std::as_const(a)]() { return ++b;}();
+                                                    ^ ~
+tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:9: error: cannot initialize a variable of type 'int' with an rvalue of type 'void'
+    int result = [&b = std::as_const(a)]() { return ++b;}();
+        ^        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\009e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #187 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\009e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/009e.cpp: In member function ‘void b::a()’:
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:8:13: error: already captured ‘i’ in lambda expression
+         [i, i] {}; // error
+             ^
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:9:17: error: already captured ‘this’ in lambda expression
+         [this, *this] {};
+                 ^~~~
+
+
+
+TEST #188 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\009e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:8:13: error: 'i' can appear only once in a capture list
+        [i, i] {}; // error
+         ~~~^
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:9:16: error: 'this' can appear only once in a capture list
+        [this, *this] {};
+         ~~~~~~^
+              
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:8:9: warning: expression result unused [-Wunused-value]
+        [i, i] {}; // error
+        ^~~~~~~~~
+tests/Lambda Expressions - Maksim Surkov/009e.cpp:9:9: warning: expression result unused [-Wunused-value]
+        [this, *this] {};
+        ^~~~~~~~~~~~~~~~
+2 warnings and 2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Lambda Expressions - Maksim Surkov\\010e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #189 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\010e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/010e.cpp: In lambda function:
+tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:43: error: inconsistent types ‘int’ and ‘const char*’ deduced for lambda return type
+ auto fun = []() -> auto {return 1; return "string"; return true;};
+                                           ^~~~~~~~
+tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:60: error: inconsistent types ‘int’ and ‘bool’ deduced for lambda return type
+ auto fun = []() -> auto {return 1; return "string"; return true;};
+                                                            ^~~~
+
+
+
+TEST #190 succeeded
+File: "tests\\Lambda Expressions - Maksim Surkov\\010e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:36: error: 'auto' in return type deduced as 'const char *' here but deduced as 'int' in earlier return statement
+auto fun = []() -> auto {return 1; return "string"; return true;};
+                                   ^
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Modules - Bulat Khabirov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Modules - Bulat Khabirov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #191 succeeded
+File: "tests\\Modules - Bulat Khabirov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Modules - Bulat Khabirov/001.cpp:8:1: error: ‘import’ does not name a type; did you mean ‘short’?
+ import M;
+ ^~~~~~
+ short
+tests/Modules - Bulat Khabirov/001.cpp: In function ‘int main()’:
+tests/Modules - Bulat Khabirov/001.cpp:11:12: error: ‘f’ was not declared in this scope
+     assert(f(5) == 7);
+            ^
+tests/Modules - Bulat Khabirov/001.cpp:11:5: error: ‘assert’ was not declared in this scope
+     assert(f(5) == 7);
+     ^~~~~~
+tests/Modules - Bulat Khabirov/001.cpp:11:5: note: ‘assert’ is defined in header ‘<cassert>’; did you forget to ‘#include <cassert>’?
+tests/Modules - Bulat Khabirov/001.cpp:1:1:
++#include <cassert>
+ /**
+tests/Modules - Bulat Khabirov/001.cpp:11:5:
+     assert(f(5) == 7);
+     ^~~~~~
+tests/Modules - Bulat Khabirov/001.cpp:12:12: error: ‘g’ was not declared in this scope
+     assert(g(3, 2) == 6);
+            ^
+
+
+
+TEST #192 succeeded
+File: "tests\\Modules - Bulat Khabirov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Modules - Bulat Khabirov/001.cpp:8:1: error: unknown type name 'import'
+import M;
+^
+tests/Modules - Bulat Khabirov/001.cpp:11:12: error: use of undeclared identifier 'f'
+    assert(f(5) == 7);
+           ^
+tests/Modules - Bulat Khabirov/001.cpp:12:12: error: use of undeclared identifier 'g'
+    assert(g(3, 2) == 6);
+           ^
+3 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Move assignment operator - Egor Ivkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move assignment operator - Egor Ivkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #193 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #194 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move assignment operator - Egor Ivkov\\002.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #195 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\002.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #196 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\002.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move assignment operator - Egor Ivkov\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #197 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #198 succeeded
+File: "tests\\Move assignment operator - Egor Ivkov\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move assignment operator - Egor Ivkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #199 FAILED
+File: "tests\\Move assignment operator - Egor Ivkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #200 FAILED
+File: "tests\\Move assignment operator - Egor Ivkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Move constructors - Egor Ivkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #201 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #202 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\002.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #203 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\002.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #204 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\002.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #205 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Move constructors - Egor Ivkov/003e.cpp: In function ‘int main()’:
+tests/Move constructors - Egor Ivkov/003e.cpp:22:15: error: cannot bind non-const lvalue reference of type ‘A&’ to an rvalue of type ‘std::remove_reference<A&>::type’ {aka ‘A’}
+  A b(std::move(a));
+      ~~~~~~~~~^~~
+tests/Move constructors - Egor Ivkov/003e.cpp:12:2: note:   initializing argument 1 of ‘A::A(A&)’
+  A(A& a) : data(a.data) {}
+  ^
+
+
+
+TEST #206 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Move constructors - Egor Ivkov/003e.cpp:22:4: error: no matching constructor for initialization of 'A'
+        A b(std::move(a));
+          ^ ~~~~~~~~~~~~
+tests/Move constructors - Egor Ivkov/003e.cpp:10:2: note: candidate constructor not viable: no known conversion from 'typename std::remove_reference<A &>::type' (aka 'A') to 'const std::string' (aka 'const basic_string<char>') for 1st argument
+        A(const std::string& data) : data(data) {};
+        ^
+tests/Move constructors - Egor Ivkov/003e.cpp:12:2: note: candidate constructor not viable: expects an l-value for 1st argument
+        A(A& a) : data(a.data) {}
+        ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #207 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #208 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #209 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #210 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Move constructors - Egor Ivkov\\006.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #211 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\006.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #212 succeeded
+File: "tests\\Move constructors - Egor Ivkov\\006.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Nullptr - Anton Prokopev" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #213 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #214 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #215 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/002e.cpp: In function ‘int main()’:
+tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: cannot convert ‘C*’ to ‘std::nullptr_t’ in assignment
+   ptr = c;
+         ^
+
+
+
+TEST #216 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: assigning to 'std::nullptr_t' (aka 'nullptr_t') from incompatible type 'C *'
+  ptr = c;
+        ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #217 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/003e.cpp: In function ‘int main()’:
+tests/Nullptr - Anton Prokopev/003e.cpp:9:12: error: call of overloaded ‘f(std::nullptr_t)’ is ambiguous
+   f(nullptr);
+            ^
+tests/Nullptr - Anton Prokopev/003e.cpp:3:6: note: candidate: ‘void f(int*)’
+ void f(int *i) {}
+      ^
+tests/Nullptr - Anton Prokopev/003e.cpp:4:6: note: candidate: ‘void f(double*)’
+ void f(double *i) {}
+      ^
+
+
+
+TEST #218 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/003e.cpp:9:3: error: call to 'f' is ambiguous
+  f(nullptr);
+  ^
+tests/Nullptr - Anton Prokopev/003e.cpp:3:6: note: candidate function
+void f(int *i) {}
+     ^
+tests/Nullptr - Anton Prokopev/003e.cpp:4:6: note: candidate function
+void f(double *i) {}
+     ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\004.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #219 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\004.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #220 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\004.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\005e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #221 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\005e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/005e.cpp: In function ‘int main()’:
+tests/Nullptr - Anton Prokopev/005e.cpp:9:6: error: call of overloaded ‘f(int)’ is ambiguous
+   f(0);
+      ^
+tests/Nullptr - Anton Prokopev/005e.cpp:3:6: note: candidate: ‘void f(int*)’
+ void f(int *i) {}
+      ^
+tests/Nullptr - Anton Prokopev/005e.cpp:4:6: note: candidate: ‘void f(double*)’
+ void f(double *i) {}
+      ^
+tests/Nullptr - Anton Prokopev/005e.cpp:5:6: note: candidate: ‘void f(std::nullptr_t)’
+ void f(std::nullptr_t i) {}
+      ^
+
+
+
+TEST #222 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\005e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/005e.cpp:9:3: error: call to 'f' is ambiguous
+  f(0);
+  ^
+tests/Nullptr - Anton Prokopev/005e.cpp:3:6: note: candidate function
+void f(int *i) {}
+     ^
+tests/Nullptr - Anton Prokopev/005e.cpp:4:6: note: candidate function
+void f(double *i) {}
+     ^
+tests/Nullptr - Anton Prokopev/005e.cpp:5:6: note: candidate function
+void f(std::nullptr_t i) {}
+     ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\006.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #223 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\006.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/006.cpp: In function ‘int main()’:
+tests/Nullptr - Anton Prokopev/006.cpp:9:9: error: call of overloaded ‘f(NULL)’ is ambiguous
+   f(NULL);
+         ^
+tests/Nullptr - Anton Prokopev/006.cpp:3:6: note: candidate: ‘void f(int*)’
+ void f(int *i) {}
+      ^
+tests/Nullptr - Anton Prokopev/006.cpp:4:6: note: candidate: ‘void f(double*)’
+ void f(double *i) {}
+      ^
+tests/Nullptr - Anton Prokopev/006.cpp:5:6: note: candidate: ‘void f(std::nullptr_t)’
+ void f(std::nullptr_t i) {}
+      ^
+
+
+
+TEST #224 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\006.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/006.cpp:9:3: error: call to 'f' is ambiguous
+  f(NULL);
+  ^
+tests/Nullptr - Anton Prokopev/006.cpp:3:6: note: candidate function
+void f(int *i) {}
+     ^
+tests/Nullptr - Anton Prokopev/006.cpp:4:6: note: candidate function
+void f(double *i) {}
+     ^
+tests/Nullptr - Anton Prokopev/006.cpp:5:6: note: candidate function
+void f(std::nullptr_t i) {}
+     ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\007.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #225 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\007.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #226 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\007.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\008e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #227 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\008e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/008e.cpp: In function ‘int main()’:
+tests/Nullptr - Anton Prokopev/008e.cpp:12:9: warning: passing NULL to non-pointer argument 1 of ‘void g(int)’ [-Wconversion-null]
+   g(NULL);
+         ^
+tests/Nullptr - Anton Prokopev/008e.cpp:13:12: error: cannot convert ‘std::nullptr_t’ to ‘int’
+   g(nullptr);
+            ^
+tests/Nullptr - Anton Prokopev/008e.cpp:8:12: note:   initializing argument 1 of ‘void g(int)’
+ void g(int i) {
+        ~~~~^
+tests/Nullptr - Anton Prokopev/008e.cpp: In instantiation of ‘void fwd(F, A) [with F = void (*)(int); A = std::nullptr_t]’:
+tests/Nullptr - Anton Prokopev/008e.cpp:15:17:   required from here
+tests/Nullptr - Anton Prokopev/008e.cpp:5:4: error: cannot convert ‘std::nullptr_t’ to ‘int’ in argument passing
+   f(a);
+   ~^~~
+
+
+
+TEST #228 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\008e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Nullptr - Anton Prokopev/008e.cpp:12:5: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
+  g(NULL);
+  ~ ^~~~
+    0
+tests/Nullptr - Anton Prokopev/008e.cpp:13:3: error: no matching function for call to 'g'
+  g(nullptr);
+  ^
+tests/Nullptr - Anton Prokopev/008e.cpp:8:6: note: candidate function not viable: no known conversion from 'nullptr_t' to 'int' for 1st argument
+void g(int i) {
+     ^
+tests/Nullptr - Anton Prokopev/008e.cpp:5:5: error: cannot initialize a parameter of type 'int' with an lvalue of type 'nullptr_t'
+  f(a);
+    ^
+tests/Nullptr - Anton Prokopev/008e.cpp:15:3: note: in instantiation of function template specialization 'fwd<void (*)(int), nullptr_t>' requested here
+  fwd(g, nullptr);
+  ^
+1 warning and 2 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Nullptr - Anton Prokopev\\009.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #229 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\009.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #230 succeeded
+File: "tests\\Nullptr - Anton Prokopev\\009.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\Override - Dmitry Turenko" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Override - Dmitry Turenko\\1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #231 succeeded
+File: "tests\\Override - Dmitry Turenko\\1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #232 succeeded
+File: "tests\\Override - Dmitry Turenko\\1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Override - Dmitry Turenko\\2e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #233 succeeded
+File: "tests\\Override - Dmitry Turenko\\2e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Override - Dmitry Turenko/2e.cpp:13:18: error: conflicting return type specified for ‘virtual long int D::foo()’
+     virtual long foo() override {
+                  ^~~
+tests/Override - Dmitry Turenko/2e.cpp:7:17: note: overridden function is ‘virtual int B::foo()’
+     virtual int foo() {
+                 ^~~
+
+
+
+TEST #234 succeeded
+File: "tests\\Override - Dmitry Turenko\\2e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Override - Dmitry Turenko/2e.cpp:13:18: error: virtual function 'foo' has a different return type ('long') than the function it overrides (which has return type 'int')
+    virtual long foo() override {
+            ~~~~ ^
+tests/Override - Dmitry Turenko/2e.cpp:7:17: note: overridden virtual function is here
+    virtual int foo() {
+            ~~~ ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Override - Dmitry Turenko\\3.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #235 succeeded
+File: "tests\\Override - Dmitry Turenko\\3.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #236 succeeded
+File: "tests\\Override - Dmitry Turenko\\3.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Override - Dmitry Turenko\\4e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #237 succeeded
+File: "tests\\Override - Dmitry Turenko\\4e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Override - Dmitry Turenko/4e.cpp:13:9: error: ‘int D::foo()’ marked ‘override’, but does not override
+     int foo() override {
+         ^~~
+
+
+
+TEST #238 succeeded
+File: "tests\\Override - Dmitry Turenko\\4e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Override - Dmitry Turenko/4e.cpp:13:15: error: only virtual member functions can be marked 'override'
+    int foo() override {
+              ^~~~~~~~~
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\RValue - Egor Ivkov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\RValue - Egor Ivkov\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #239 succeeded
+File: "tests\\RValue - Egor Ivkov\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #240 succeeded
+File: "tests\\RValue - Egor Ivkov\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\RValue - Egor Ivkov\\002e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #241 succeeded
+File: "tests\\RValue - Egor Ivkov\\002e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/002e.cpp: In function ‘int main()’:
+tests/RValue - Egor Ivkov/002e.cpp:14:12: error: cannot bind non-const lvalue reference of type ‘A&’ to an rvalue of type ‘A’
+  A& aref = A();
+            ^~~
+
+
+
+TEST #242 succeeded
+File: "tests\\RValue - Egor Ivkov\\002e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/002e.cpp:14:5: error: non-const lvalue reference to type 'A' cannot bind to a temporary of type 'A'
+        A& aref = A();
+           ^      ~~~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\RValue - Egor Ivkov\\003.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #243 succeeded
+File: "tests\\RValue - Egor Ivkov\\003.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #244 succeeded
+File: "tests\\RValue - Egor Ivkov\\003.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\RValue - Egor Ivkov\\004e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #245 succeeded
+File: "tests\\RValue - Egor Ivkov\\004e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/004e.cpp: In function ‘int main()’:
+tests/RValue - Egor Ivkov/004e.cpp:13:13: error: cannot bind rvalue reference of type ‘A&&’ to lvalue of type ‘A’
+  A&& aref = a;
+             ^
+
+
+
+TEST #246 succeeded
+File: "tests\\RValue - Egor Ivkov\\004e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/004e.cpp:13:6: error: rvalue reference to type 'A' cannot bind to lvalue of type 'A'
+        A&& aref = a;
+            ^      ~
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\RValue - Egor Ivkov\\005.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #247 succeeded
+File: "tests\\RValue - Egor Ivkov\\005.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/005.cpp: In function ‘int main()’:
+tests/RValue - Egor Ivkov/005.cpp:13:18: error: ‘move’ is not a member of ‘std’
+  A&& aref = std::move(a);
+                  ^~~~
+tests/RValue - Egor Ivkov/005.cpp:13:18: note: ‘std::move’ is defined in header ‘<utility>’; did you forget to ‘#include <utility>’?
+tests/RValue - Egor Ivkov/005.cpp:1:1:
++#include <utility>
+ //Author: Egor Ivkov
+tests/RValue - Egor Ivkov/005.cpp:13:18:
+  A&& aref = std::move(a);
+                  ^~~~
+
+
+
+TEST #248 succeeded
+File: "tests\\RValue - Egor Ivkov\\005.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/RValue - Egor Ivkov/005.cpp:13:13: error: use of undeclared identifier 'std'
+        A&& aref = std::move(a);
+                   ^
+1 error generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Smart Pointers - Dmitry Turenko" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\01.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #249 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\01.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #250 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\01.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\02.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #251 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\02.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #252 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\02.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\03e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #253 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\03e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Smart Pointers - Dmitry Turenko/03e.cpp: In function ‘void test_reassign_unique()’:
+tests/Smart Pointers - Dmitry Turenko/03e.cpp:10:34: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = int; _Dp = std::default_delete<int>]’
+     std::unique_ptr<int> v_copy(v);
+                                  ^
+In file included from /usr/include/c++/8/memory:80,
+                 from tests/Smart Pointers - Dmitry Turenko/03e.cpp:6:
+/usr/include/c++/8/bits/unique_ptr.h:394:7: note: declared here
+       unique_ptr(const unique_ptr&) = delete;
+       ^~~~~~~~~~
+
+
+
+TEST #254 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\03e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Smart Pointers - Dmitry Turenko/03e.cpp:10:26: error: call to deleted constructor of 'std::unique_ptr<int>'
+    std::unique_ptr<int> v_copy(v);
+                         ^      ~
+/usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/unique_ptr.h:394:7: note: 'unique_ptr' has been explicitly marked deleted here
+      unique_ptr(const unique_ptr&) = delete;
+      ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\04.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #255 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\04.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #256 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\04.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\05.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #257 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\05.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #258 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\05.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\06.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #259 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\06.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #260 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\06.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\07.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #261 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\07.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #262 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\07.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\08.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #263 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\08.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #264 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\08.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\09.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #265 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\09.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #266 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\09.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\10.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #267 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\10.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #268 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\10.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\11.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #269 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\11.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #270 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\11.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Smart Pointers - Dmitry Turenko\\12.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #271 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\12.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #272 succeeded
+File: "tests\\Smart Pointers - Dmitry Turenko\\12.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+
+==================== DIRECTORY: "tests\\TypeId - Anton Skudarnov" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\1.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #273 FAILED
+File: "tests\\TypeId - Anton Skudarnov\\1.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #274 FAILED
+File: "tests\\TypeId - Anton Skudarnov\\1.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\2.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #275 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\2.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/TypeId - Anton Skudarnov/2.cpp: In function ‘const int&& foo()’:
+tests/TypeId - Anton Skudarnov/2.cpp:4:9: warning: returning reference to temporary [-Wreturn-local-addr]
+  return 1;
+         ^
+tests/TypeId - Anton Skudarnov/2.cpp: At global scope:
+tests/TypeId - Anton Skudarnov/2.cpp:5:2: error: extra ‘;’ [-Wpedantic]
+ };
+  ^
+
+
+
+TEST #276 FAILED
+File: "tests\\TypeId - Anton Skudarnov\\2.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\3.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #277 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\3.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #278 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\3.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\4.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #279 FAILED
+File: "tests\\TypeId - Anton Skudarnov\\4.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #280 FAILED
+File: "tests\\TypeId - Anton Skudarnov\\4.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\5.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #281 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\5.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #282 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\5.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\6e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #283 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\6e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/TypeId - Anton Skudarnov/6e.cpp: In function ‘const int&& foo()’:
+tests/TypeId - Anton Skudarnov/6e.cpp:5:9: warning: returning reference to temporary [-Wreturn-local-addr]
+  return 1;
+         ^
+tests/TypeId - Anton Skudarnov/6e.cpp: At global scope:
+tests/TypeId - Anton Skudarnov/6e.cpp:6:2: error: extra ‘;’ [-Wpedantic]
+ };
+  ^
+tests/TypeId - Anton Skudarnov/6e.cpp: In function ‘int main()’:
+tests/TypeId - Anton Skudarnov/6e.cpp:14:13: error: must ‘#include <typeinfo>’ before using ‘typeid’
+tests/TypeId - Anton Skudarnov/6e.cpp:1:1:
++#include <typeinfo>
+ 
+tests/TypeId - Anton Skudarnov/6e.cpp:14:13:
+  if (typeid(i) == typeid(i2)) {
+             ^
+tests/TypeId - Anton Skudarnov/6e.cpp:14:26: error: must ‘#include <typeinfo>’ before using ‘typeid’
+  if (typeid(i) == typeid(i2)) {
+                          ^~
+tests/TypeId - Anton Skudarnov/6e.cpp:16:2: error: expected ‘}’ at end of input
+  }
+  ^
+tests/TypeId - Anton Skudarnov/6e.cpp:11:1: note: to match this ‘{’
+ {
+ ^
+
+
+
+TEST #284 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\6e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/TypeId - Anton Skudarnov/6e.cpp:5:9: warning: returning reference to local temporary object [-Wreturn-stack-address]
+        return 1;
+               ^
+tests/TypeId - Anton Skudarnov/6e.cpp:14:6: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(i) == typeid(i2)) {
+            ^
+tests/TypeId - Anton Skudarnov/6e.cpp:14:19: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(i) == typeid(i2)) {
+                         ^
+tests/TypeId - Anton Skudarnov/6e.cpp:16:3: error: expected '}'
+        }
+         ^
+tests/TypeId - Anton Skudarnov/6e.cpp:11:1: note: to match this '{'
+{
+^
+1 warning and 3 errors generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\TypeId - Anton Skudarnov\\7e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #285 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\7e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/TypeId - Anton Skudarnov/7e.cpp: In function ‘const int&& foo()’:
+tests/TypeId - Anton Skudarnov/7e.cpp:4:9: warning: returning reference to temporary [-Wreturn-local-addr]
+  return 1;
+         ^
+tests/TypeId - Anton Skudarnov/7e.cpp: At global scope:
+tests/TypeId - Anton Skudarnov/7e.cpp:5:2: error: extra ‘;’ [-Wpedantic]
+ };
+  ^
+tests/TypeId - Anton Skudarnov/7e.cpp: In function ‘int main()’:
+tests/TypeId - Anton Skudarnov/7e.cpp:13:13: error: must ‘#include <typeinfo>’ before using ‘typeid’
+tests/TypeId - Anton Skudarnov/7e.cpp:1:1:
++#include <typeinfo>
+ 
+tests/TypeId - Anton Skudarnov/7e.cpp:13:13:
+  if (typeid(i) == typeid(i2)) {
+             ^
+tests/TypeId - Anton Skudarnov/7e.cpp:13:26: error: must ‘#include <typeinfo>’ before using ‘typeid’
+  if (typeid(i) == typeid(i2)) {
+                          ^~
+
+
+
+TEST #286 succeeded
+File: "tests\\TypeId - Anton Skudarnov\\7e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/TypeId - Anton Skudarnov/7e.cpp:4:9: warning: returning reference to local temporary object [-Wreturn-stack-address]
+        return 1;
+               ^
+tests/TypeId - Anton Skudarnov/7e.cpp:13:6: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(i) == typeid(i2)) {
+            ^
+tests/TypeId - Anton Skudarnov/7e.cpp:13:19: error: you need to include <typeinfo> before using the 'typeid' operator
+        if (typeid(i) == typeid(i2)) {
+                         ^
+1 warning and 2 errors generated.
+
+
+
+
+==================== DIRECTORY: "tests\\Variadic templates - Eduard Zalyaev" ====================
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Variadic templates - Eduard Zalyaev\\001.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #287 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+TEST #288 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\001.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Variadic templates - Eduard Zalyaev\\002.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #289 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\002.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+3a23
+3 a 23 
+ asddsadas 17 71 0
+
+
+TEST #290 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\002.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+
+3a23
+3 a 23 
+ asddsadas 17 71 0
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Variadic templates - Eduard Zalyaev\\003e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #291 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Variadic templates - Eduard Zalyaev/003e.cpp: In function ‘int main()’:
+tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:10: error: type/value mismatch at argument 1 in template parameter list for ‘template<class ... Args> struct Tester’
+  Tester<0> d; //0 is not a type
+          ^
+tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:10: note:   expected a type, got ‘0’
+
+
+
+TEST #292 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\003e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:9: error: template argument for template type parameter must be a type
+        Tester<0> d; //0 is not a type
+               ^
+tests/Variadic templates - Eduard Zalyaev/003e.cpp:7:22: note: template parameter is declared here
+template<typename ...Args>
+                     ^
+1 error generated.
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~ FILE: "tests\\Variadic templates - Eduard Zalyaev\\004e.cpp" ~~~~~~~~~~~~~~~~~~~~~~
+
+
+TEST #293 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\004e.cpp"
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Variadic templates - Eduard Zalyaev/004e.cpp: In function ‘int main()’:
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                                                ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:52: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  A1<char*>::A2<char*, char*>::printer("W", "O", "W");
+                                                    ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:52: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:52: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+
+
+
+TEST #294 succeeded
+File: "tests\\Variadic templates - Eduard Zalyaev\\004e.cpp"
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Program/Compiler output (stderr):
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:74: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:79: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                     ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:84: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                          ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:89: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                               ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:94: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                                    ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:99: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                                         ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:104: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                                              ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:109: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");
+                                                                                                                   ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:39: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*>::A2<char*, char*>::printer("W", "O", "W");
+                                             ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:44: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*>::A2<char*, char*>::printer("W", "O", "W");
+                                                  ^
+tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:49: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
+        A1<char*>::A2<char*, char*>::printer("W", "O", "W");
+                                                       ^
+11 errors generated.
+
+
+RESULTS:
+# of directories: 21
+# of files: 147
+# of tests: 294
+# of tests succeeded: 278
+# of tests failed: 16
