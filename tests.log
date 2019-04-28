@@ -10,14 +10,14 @@ C++ Test Driver Results
 
 TEST #1 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #2 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -27,14 +27,14 @@ Program/Compiler output (stderr):
 
 TEST #3 FAILED
 File: "tests\\Auto Specifier - Anton Skudarnov\\10.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #4 FAILED
 File: "tests\\Auto Specifier - Anton Skudarnov\\10.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -44,7 +44,7 @@ Program/Compiler output (stderr):
 
 TEST #5 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\11e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/11e.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/11e.cpp:29:16: error: cannot bind non-const lvalue reference of type ‘int&’ to an rvalue of type ‘int’
@@ -58,7 +58,7 @@ tests/Auto Specifier - Anton Skudarnov/11e.cpp:31:17: error: cannot bind non-con
 
 TEST #6 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\11e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/11e.cpp:29:8: error: non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
         auto& r1 = foo(l); //initial value to non const must be an lvalue  //cannot convert from 'int' to 'int &'
@@ -75,7 +75,7 @@ tests/Auto Specifier - Anton Skudarnov/11e.cpp:31:8: error: non-const lvalue ref
 
 TEST #7 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\12e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:6: error: stray ‘\342’ in program
   foo(“C++ is cool ? ”, true);
@@ -113,7 +113,7 @@ tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:9: error: ‘C’ was not decla
 
 TEST #8 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\12e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/12e.cpp:1:10: error: 'auto' not allowed in function prototype
 auto foo(auto v1, auto v2) -> decltype(v1 + v2);
@@ -142,7 +142,7 @@ tests/Auto Specifier - Anton Skudarnov/12e.cpp:8:23: error: non-ASCII characters
 
 TEST #9 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\2e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/2e.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:12: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘void’)
@@ -377,7 +377,7 @@ tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:17:   required from here
 
 TEST #10 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\2e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:12: error: invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'void')
         std::cout << f(); //This will cause compile error because of the void type
@@ -484,14 +484,14 @@ tests/Auto Specifier - Anton Skudarnov/2e.cpp:11:12: error: invalid operands to 
 
 TEST #11 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\3.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #12 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\3.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -501,7 +501,7 @@ Program/Compiler output (stderr):
 
 TEST #13 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\3a.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/3a.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:15: error: must ‘#include <typeinfo>’ before using ‘typeid’
@@ -519,7 +519,7 @@ tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:32: error: must ‘#include <typ
 
 TEST #14 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\3a.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:6: error: you need to include <typeinfo> before using the 'typeid' operator
         if (typeid(f()) == typeid(void)) {
@@ -536,7 +536,7 @@ tests/Auto Specifier - Anton Skudarnov/3a.cpp:8:21: error: you need to include <
 
 TEST #15 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\4e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/4e.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:11: error: two or more data types in declaration of ‘a’
@@ -547,7 +547,7 @@ tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:11: error: two or more data type
 
 TEST #16 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\4e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:2: error: 'auto' storage class specifier is not permitted in C++11, and will not be supported in future releases [-Werror,-Wauto-storage-class]
         auto int a = 1;
@@ -561,7 +561,7 @@ tests/Auto Specifier - Anton Skudarnov/4e.cpp:4:2: error: 'auto' storage class s
 
 TEST #17 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\5e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/5e.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:2: error: declaration of ‘auto v’ has no initializer
@@ -572,7 +572,7 @@ tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:2: error: declaration of ‘auto
 
 TEST #18 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\5e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:7: error: declaration of variable 'v' with deduced type 'auto' requires an initializer
         auto v;
@@ -586,14 +586,14 @@ tests/Auto Specifier - Anton Skudarnov/5e.cpp:4:7: error: declaration of variabl
 
 TEST #19 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\6.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #20 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\6.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -603,14 +603,14 @@ Program/Compiler output (stderr):
 
 TEST #21 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\7.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #22 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\7.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -620,14 +620,14 @@ Program/Compiler output (stderr):
 
 TEST #23 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\7a.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #24 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\7a.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -637,7 +637,7 @@ Program/Compiler output (stderr):
 
 TEST #25 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\8.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/8.cpp: In function ‘int main()’:
 tests/Auto Specifier - Anton Skudarnov/8.cpp:8:15: error: must ‘#include <typeinfo>’ before using ‘typeid’
@@ -655,7 +655,7 @@ tests/Auto Specifier - Anton Skudarnov/8.cpp:8:32: error: must ‘#include <type
 
 TEST #26 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\8.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/8.cpp:8:6: error: you need to include <typeinfo> before using the 'typeid' operator
         if (typeid(f()) == typeid(void)) {
@@ -672,7 +672,7 @@ tests/Auto Specifier - Anton Skudarnov/8.cpp:8:21: error: you need to include <t
 
 TEST #27 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\9e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/9e.cpp:3:21: error: expected unqualified-id before ‘)’ token
  constexpr auto auto() {
@@ -730,7 +730,7 @@ tests/Auto Specifier - Anton Skudarnov/9e.cpp:23:16: error: expected unqualified
 
 TEST #28 succeeded
 File: "tests\\Auto Specifier - Anton Skudarnov\\9e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Auto Specifier - Anton Skudarnov/9e.cpp:3:16: error: cannot combine with previous 'auto' declaration specifier
 constexpr auto auto() {
@@ -779,14 +779,14 @@ constexpr auto auto() {
 
 TEST #29 succeeded
 File: "tests\\Bind - Maksim Surkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #30 succeeded
 File: "tests\\Bind - Maksim Surkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -796,14 +796,14 @@ Program/Compiler output (stderr):
 
 TEST #31 succeeded
 File: "tests\\Bind - Maksim Surkov\\002.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #32 succeeded
 File: "tests\\Bind - Maksim Surkov\\002.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -813,7 +813,7 @@ Program/Compiler output (stderr):
 
 TEST #33 succeeded
 File: "tests\\Bind - Maksim Surkov\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
 /usr/include/c++/8/functional: In instantiation of ‘struct std::_Bind_check_arity<int (*)(int, int, int), int>’:
@@ -849,7 +849,7 @@ In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
 
 TEST #34 succeeded
 File: "tests\\Bind - Maksim Surkov\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 In file included from tests/Bind - Maksim Surkov/003e.cpp:3:
 /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/functional:758:7: error: static_assert failed "Wrong number of arguments for function"
@@ -882,14 +882,14 @@ tests/Bind - Maksim Surkov/003e.cpp:12:19: error: no matching function for call 
 
 TEST #35 succeeded
 File: "tests\\Bind - Maksim Surkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #36 succeeded
 File: "tests\\Bind - Maksim Surkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -899,14 +899,14 @@ Program/Compiler output (stderr):
 
 TEST #37 succeeded
 File: "tests\\Bind - Maksim Surkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #38 succeeded
 File: "tests\\Bind - Maksim Surkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -920,9 +920,9 @@ Program/Compiler output (stderr):
 
 TEST #39 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/ccJK48O8.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
+/tmp/ccX0h8gP.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
 001.cpp:(.text._ZNSt6threadC2IRFviEJiEEEOT_DpOT0_[_ZNSt6threadC5IRFviEJiEEEOT_DpOT0_]+0x33): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 
@@ -930,9 +930,9 @@ collect2: error: ld returned 1 exit status
 
 TEST #40 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/001-0f9b65.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
+/tmp/001-7381fd.o: In function `std::thread::thread<void (&)(int), int>(void (&)(int), int&&)':
 001.cpp:(.text._ZNSt6threadC2IRFviEJiEEEOT_DpOT0_[_ZNSt6threadC2IRFviEJiEEEOT_DpOT0_]+0x28): undefined reference to `pthread_create'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
@@ -943,9 +943,9 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 TEST #41 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/ccBbrBhr.o: In function `std::thread::thread<void (&)()>(void (&)())':
+/tmp/ccN97fPl.o: In function `std::thread::thread<void (&)()>(void (&)())':
 002e.cpp:(.text._ZNSt6threadC2IRFvvEJEEEOT_DpOT0_[_ZNSt6threadC5IRFvvEJEEEOT_DpOT0_]+0x2f): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 
@@ -953,13 +953,13 @@ collect2: error: ld returned 1 exit status
 
 TEST #42 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Concurrency - Maksim Surkov/002e.cpp:6:5: warning: expression result unused [-Wunused-value]
     1; // something useless
     ^
 1 warning generated.
-/tmp/002e-f9cfb9.o: In function `std::thread::thread<void (&)()>(void (&)())':
+/tmp/002e-cd2b1b.o: In function `std::thread::thread<void (&)()>(void (&)())':
 002e.cpp:(.text._ZNSt6threadC2IRFvvEJEEEOT_DpOT0_[_ZNSt6threadC2IRFvvEJEEEOT_DpOT0_]+0x24): undefined reference to `pthread_create'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
@@ -970,9 +970,9 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 TEST #43 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/ccqcvVcx.o: In function `std::thread::thread<main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2]>(main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2])':
+/tmp/cc4x6nxF.o: In function `std::thread::thread<main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2]>(main::{lambda(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)#1}&, char const (&) [2])':
 003.cpp:(.text+0x375): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 
@@ -980,9 +980,9 @@ collect2: error: ld returned 1 exit status
 
 TEST #44 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/003-269272.o: In function `std::thread::thread<main::$_0&, char const (&) [2]>(main::$_0&, char const (&) [2])':
+/tmp/003-01d8ad.o: In function `std::thread::thread<main::$_0&, char const (&) [2]>(main::$_0&, char const (&) [2])':
 003.cpp:(.text+0x2c8): undefined reference to `pthread_create'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
@@ -993,9 +993,9 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 TEST #45 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/ccz57frV.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
+/tmp/ccyYwvs7.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
 004.cpp:(.text._ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_[_ZNSt6threadC5IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_]+0x33): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 
@@ -1003,9 +1003,9 @@ collect2: error: ld returned 1 exit status
 
 TEST #46 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
-/tmp/004-178f6f.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
+/tmp/004-82cfd2.o: In function `std::thread::thread<void (&)(std::promise<int>*), std::promise<int>*>(void (&)(std::promise<int>*), std::promise<int>*&&)':
 004.cpp:(.text._ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_[_ZNSt6threadC2IRFvPSt7promiseIiEEJS3_EEEOT_DpOT0_]+0x28): undefined reference to `pthread_create'
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
@@ -1016,7 +1016,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 
 TEST #47 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Concurrency - Maksim Surkov/005.cpp:5:10: fatal error: execution: No such file or directory
  #include <execution>
@@ -1027,7 +1027,7 @@ compilation terminated.
 
 TEST #48 succeeded
 File: "tests\\Concurrency - Maksim Surkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Concurrency - Maksim Surkov/005.cpp:5:10: fatal error: 'execution' file not found
 #include <execution>
@@ -1045,14 +1045,14 @@ tests/Concurrency - Maksim Surkov/005.cpp:5:10: fatal error: 'execution' file no
 
 TEST #49 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #50 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1062,7 +1062,7 @@ Program/Compiler output (stderr):
 
 TEST #51 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if2.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Conditions in if - Alexey Astakhov/if2.cpp: In function ‘auto& get(S&)’:
 tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: ‘struct S’ has no member named ‘s’
@@ -1073,7 +1073,7 @@ tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: ‘struct S’ ha
 
 TEST #52 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if2.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: no member named 's' in 'S'
                 return s.s;
@@ -1087,7 +1087,7 @@ tests/Conditions in if - Alexey Astakhov/if2.cpp:21:12: error: no member named '
 
 TEST #53 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if3e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Conditions in if - Alexey Astakhov/if3e.cpp: In function ‘auto& get(S&)’:
 tests/Conditions in if - Alexey Astakhov/if3e.cpp:21:12: error: ‘struct S’ has no member named ‘s’
@@ -1108,7 +1108,7 @@ tests/Conditions in if - Alexey Astakhov/if3e.cpp:26:36: error: use of ‘auto& 
 
 TEST #54 succeeded
 File: "tests\\Conditions in if - Alexey Astakhov\\if3e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Conditions in if - Alexey Astakhov/if3e.cpp:21:12: error: no member named 's' in 'S'
                 return s.s;
@@ -1132,14 +1132,14 @@ tests/Conditions in if - Alexey Astakhov/if3e.cpp:26:26: note: in instantiation 
 
 TEST #55 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #56 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1149,7 +1149,7 @@ Program/Compiler output (stderr):
 
 TEST #57 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/002e.cpp:14:32: error: call to non-‘constexpr’ function ‘int getSomeInt()’
  constexpr int five = getSomeInt();
@@ -1189,7 +1189,7 @@ tests/Constexpr - Bulat Khabirov/002e.cpp:20:15: note: ‘lazyFour’ used in it
 
 TEST #58 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/002e.cpp:14:15: error: constexpr variable 'five' must be initialized by a constant expression
 constexpr int five = getSomeInt();
@@ -1235,7 +1235,7 @@ tests/Constexpr - Bulat Khabirov/002e.cpp:27:5: error: static_assert failed
 
 TEST #59 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/003e.cpp: In function ‘constexpr int sum(int, int)’:
 tests/Constexpr - Bulat Khabirov/003e.cpp:17:1: error: the value of ‘x’ is not usable in a constant expression
@@ -1325,7 +1325,7 @@ tests/Constexpr - Bulat Khabirov/003e.cpp:69:9: note: ‘int x’ is not const
 
 TEST #60 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/003e.cpp:12:15: error: constexpr function never produces a constant expression [-Winvalid-constexpr]
 constexpr int sum(int a, int b) {
@@ -1418,14 +1418,14 @@ tests/Constexpr - Bulat Khabirov/003e.cpp:69:9: note: declared here
 
 TEST #61 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #62 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1435,7 +1435,7 @@ Program/Compiler output (stderr):
 
 TEST #63 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/005.cpp: In function ‘int main()’:
 tests/Constexpr - Bulat Khabirov/005.cpp:22:33: error: passing ‘const Rectangle’ as ‘this’ argument discards qualifiers [-fpermissive]
@@ -1459,7 +1459,7 @@ tests/Constexpr - Bulat Khabirov/005.cpp:23:5:
 
 TEST #64 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/005.cpp:22:20: error: 'this' argument to member function 'getArea' has type 'const Rectangle', but function is not marked const
     int rectArea = rect.getArea();
@@ -1479,7 +1479,7 @@ tests/Constexpr - Bulat Khabirov/005.cpp:23:5: error: use of undeclared identifi
 
 TEST #65 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\006e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/006e.cpp: In constructor ‘constexpr Rectangle::Rectangle(int, int)’:
 tests/Constexpr - Bulat Khabirov/006e.cpp:17:51: error: call to non-‘constexpr’ function ‘std::__cxx11::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char; _Traits = std::char_traits<char>; _Alloc = std::allocator<char>]’
@@ -1508,7 +1508,7 @@ tests/Constexpr - Bulat Khabirov/006e.cpp:34:34: error: ‘constexpr Rectangle2:
 
 TEST #66 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\006e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constexpr - Bulat Khabirov/006e.cpp:17:15: error: constexpr constructor never produces a constant expression [-Winvalid-constexpr]
     constexpr Rectangle (int h, int w) : h(h), w(w) {}
@@ -1547,14 +1547,14 @@ class Rectangle2 {
 
 TEST #67 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\007.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #68 succeeded
 File: "tests\\Constexpr - Bulat Khabirov\\007.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1564,14 +1564,14 @@ Program/Compiler output (stderr):
 
 TEST #69 FAILED
 File: "tests\\Constexpr - Bulat Khabirov\\008e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #70 FAILED
 File: "tests\\Constexpr - Bulat Khabirov\\008e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1585,14 +1585,14 @@ Program/Compiler output (stderr):
 
 TEST #71 succeeded
 File: "tests\\Constructors - Anton Prokopev\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #72 succeeded
 File: "tests\\Constructors - Anton Prokopev\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1602,14 +1602,14 @@ Program/Compiler output (stderr):
 
 TEST #73 FAILED
 File: "tests\\Constructors - Anton Prokopev\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #74 succeeded
 File: "tests\\Constructors - Anton Prokopev\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/002e.cpp:7:14: error: constructor for 'C' creates a delegation cycle [-Wdelegating-ctor-cycles]
   C(int i) : C() {}
@@ -1629,14 +1629,14 @@ tests/Constructors - Anton Prokopev/002e.cpp:7:3: note: which delegates to
 
 TEST #75 succeeded
 File: "tests\\Constructors - Anton Prokopev\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #76 succeeded
 File: "tests\\Constructors - Anton Prokopev\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1646,14 +1646,14 @@ Program/Compiler output (stderr):
 
 TEST #77 succeeded
 File: "tests\\Constructors - Anton Prokopev\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #78 succeeded
 File: "tests\\Constructors - Anton Prokopev\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1663,7 +1663,7 @@ Program/Compiler output (stderr):
 
 TEST #79 FAILED
 File: "tests\\Constructors - Anton Prokopev\\005e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d1.a == 1' failed.
 
@@ -1671,7 +1671,7 @@ a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d
 
 TEST #80 FAILED
 File: "tests\\Constructors - Anton Prokopev\\005e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d1.a == 1' failed.
 
@@ -1682,7 +1682,7 @@ a.exe: tests/Constructors - Anton Prokopev/005e.cpp:22: int main(): Assertion `d
 
 TEST #81 succeeded
 File: "tests\\Constructors - Anton Prokopev\\006.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/006.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/006.cpp:20:29: error: no matching function for call to ‘Derived::Derived(int, bool)’
@@ -1703,7 +1703,7 @@ tests/Constructors - Anton Prokopev/006.cpp:12:7: note:   candidate expects 1 ar
 
 TEST #82 succeeded
 File: "tests\\Constructors - Anton Prokopev\\006.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/006.cpp:20:18: error: no matching constructor for initialization of 'Derived'
   Derived d1(5), d2(12, true);
@@ -1724,14 +1724,14 @@ tests/Constructors - Anton Prokopev/006.cpp:12:7: note: candidate constructor (t
 
 TEST #83 succeeded
 File: "tests\\Constructors - Anton Prokopev\\007.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #84 succeeded
 File: "tests\\Constructors - Anton Prokopev\\007.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1741,7 +1741,7 @@ Program/Compiler output (stderr):
 
 TEST #85 FAILED
 File: "tests\\Constructors - Anton Prokopev\\008e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x.a == 3' failed.
 
@@ -1749,7 +1749,7 @@ a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x
 
 TEST #86 FAILED
 File: "tests\\Constructors - Anton Prokopev\\008e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x.a == 3' failed.
 
@@ -1760,7 +1760,7 @@ a.exe: tests/Constructors - Anton Prokopev/008e.cpp:16: int main(): Assertion `x
 
 TEST #87 succeeded
 File: "tests\\Constructors - Anton Prokopev\\009e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/009e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/009e.cpp:14:10: error: use of deleted function ‘Q::Q(Q&)’
@@ -1774,7 +1774,7 @@ tests/Constructors - Anton Prokopev/009e.cpp:6:3: note: declared here
 
 TEST #88 succeeded
 File: "tests\\Constructors - Anton Prokopev\\009e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/009e.cpp:14:5: error: call to deleted constructor of 'Q'
   Q q2(q1);
@@ -1791,7 +1791,7 @@ tests/Constructors - Anton Prokopev/009e.cpp:6:3: note: 'Q' has been explicitly 
 
 TEST #89 succeeded
 File: "tests\\Constructors - Anton Prokopev\\010e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/010e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/010e.cpp:15:12: error: use of deleted function ‘QDerived::QDerived()’
@@ -1809,7 +1809,7 @@ tests/Constructors - Anton Prokopev/010e.cpp:6:3: note: declared here
 
 TEST #90 succeeded
 File: "tests\\Constructors - Anton Prokopev\\010e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/010e.cpp:15:12: error: call to implicitly-deleted default constructor of 'QDerived'
   QDerived q1;
@@ -1829,7 +1829,7 @@ tests/Constructors - Anton Prokopev/010e.cpp:6:3: note: 'Q' has been explicitly 
 
 TEST #91 succeeded
 File: "tests\\Constructors - Anton Prokopev\\011e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/011e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/011e.cpp:16:12: error: use of deleted function ‘QDerived::QDerived()’
@@ -1847,7 +1847,7 @@ tests/Constructors - Anton Prokopev/011e.cpp:5:3: note: declared here
 
 TEST #92 succeeded
 File: "tests\\Constructors - Anton Prokopev\\011e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/011e.cpp:16:12: error: call to implicitly-deleted default constructor of 'QDerived'
   QDerived q1;
@@ -1870,14 +1870,14 @@ tests/Constructors - Anton Prokopev/011e.cpp:5:3: note: 'Q' has been explicitly 
 
 TEST #93 succeeded
 File: "tests\\Constructors - Anton Prokopev\\012.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #94 succeeded
 File: "tests\\Constructors - Anton Prokopev\\012.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1887,14 +1887,14 @@ Program/Compiler output (stderr):
 
 TEST #95 succeeded
 File: "tests\\Constructors - Anton Prokopev\\013.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #96 succeeded
 File: "tests\\Constructors - Anton Prokopev\\013.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1904,7 +1904,7 @@ Program/Compiler output (stderr):
 
 TEST #97 succeeded
 File: "tests\\Constructors - Anton Prokopev\\014e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/014e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/014e.cpp:12:22: error: could not convert ‘{1, 2.0e+0, 3, ""}’ from ‘<brace-enclosed initializer list>’ to ‘R’
@@ -1915,7 +1915,7 @@ tests/Constructors - Anton Prokopev/014e.cpp:12:22: error: could not convert ‘
 
 TEST #98 succeeded
 File: "tests\\Constructors - Anton Prokopev\\014e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/014e.cpp:12:5: error: no matching constructor for initialization of 'R'
   R r = {1, 2., 3, ""};
@@ -1936,14 +1936,14 @@ tests/Constructors - Anton Prokopev/014e.cpp:4:7: note: candidate constructor (t
 
 TEST #99 succeeded
 File: "tests\\Constructors - Anton Prokopev\\015.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #100 succeeded
 File: "tests\\Constructors - Anton Prokopev\\015.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -1953,7 +1953,7 @@ Program/Compiler output (stderr):
 
 TEST #101 succeeded
 File: "tests\\Constructors - Anton Prokopev\\016e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/016e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/016e.cpp:12:16: error: no matching function for call to ‘R::R(int, int, double)’
@@ -1974,7 +1974,7 @@ tests/Constructors - Anton Prokopev/016e.cpp:4:7: note:   candidate expects 1 ar
 
 TEST #102 succeeded
 File: "tests\\Constructors - Anton Prokopev\\016e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/016e.cpp:12:5: error: no matching constructor for initialization of 'R'
   R r(1, 2, 4.5);
@@ -1995,7 +1995,7 @@ tests/Constructors - Anton Prokopev/016e.cpp:4:7: note: candidate constructor (t
 
 TEST #103 succeeded
 File: "tests\\Constructors - Anton Prokopev\\017e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/017e.cpp: In function ‘int main()’:
 tests/Constructors - Anton Prokopev/017e.cpp:11:10: error: expected identifier before numeric constant
@@ -2017,7 +2017,7 @@ tests/Constructors - Anton Prokopev/017e.cpp:11:13: error: expected unqualified-
 
 TEST #104 succeeded
 File: "tests\\Constructors - Anton Prokopev\\017e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Constructors - Anton Prokopev/017e.cpp:11:10: error: expected variable name or 'this' in lambda capture list
   R r = [1, 3, 5];
@@ -2035,14 +2035,14 @@ tests/Constructors - Anton Prokopev/017e.cpp:11:10: error: expected variable nam
 
 TEST #105 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #106 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2052,14 +2052,14 @@ Program/Compiler output (stderr):
 
 TEST #107 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype2.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #108 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype2.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2069,14 +2069,14 @@ Program/Compiler output (stderr):
 
 TEST #109 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype3.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #110 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype3.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2086,7 +2086,7 @@ Program/Compiler output (stderr):
 
 TEST #111 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype4e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp: In function ‘int main()’:
 tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:17:15: error: decltype cannot resolve address of overloaded function
@@ -2097,7 +2097,7 @@ tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:17:15: error: decltype
 
 TEST #112 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype4e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Decltype specifier - Alexey Astakhov/decltype4e.cpp:17:11: error: reference to overloaded function could not be resolved; did you mean to call it with no arguments?
         decltype(func) var1;
@@ -2118,14 +2118,14 @@ int func() {
 
 TEST #113 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype5.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #114 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype5.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2135,14 +2135,14 @@ Program/Compiler output (stderr):
 
 TEST #115 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype6.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #116 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype6.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2152,14 +2152,14 @@ Program/Compiler output (stderr):
 
 TEST #117 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype7.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #118 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype7.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2169,7 +2169,7 @@ Program/Compiler output (stderr):
 
 TEST #119 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype8e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp: In function ‘int main()’:
 tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:21: error: array must be initialized with a brace-enclosed initializer
@@ -2180,7 +2180,7 @@ tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:21: error: array mu
 
 TEST #120 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype8e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:17: error: array initializer must be an initializer list
         decltype(auto) c = a;
@@ -2194,14 +2194,14 @@ tests/Decltype specifier - Alexey Astakhov/decltype8e.cpp:11:17: error: array in
 
 TEST #121 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype9.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #122 succeeded
 File: "tests\\Decltype specifier - Alexey Astakhov\\decltype9.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2215,14 +2215,14 @@ Program/Compiler output (stderr):
 
 TEST #123 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #124 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2232,7 +2232,7 @@ Program/Compiler output (stderr):
 
 TEST #125 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\2e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/2e.cpp: In function ‘int test_delete_behavior()’:
 tests/Default&Delete - Dmitry Turenko/2e.cpp:12:7: error: use of deleted function ‘test_delete_behavior()::C::C()’
@@ -2246,7 +2246,7 @@ tests/Default&Delete - Dmitry Turenko/2e.cpp:9:9: note: declared here
 
 TEST #126 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\2e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/2e.cpp:12:7: error: call to deleted constructor of 'C'
     C c;
@@ -2263,7 +2263,7 @@ tests/Default&Delete - Dmitry Turenko/2e.cpp:9:9: note: 'C' has been explicitly 
 
 TEST #127 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\3e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/3e.cpp: In function ‘int test_delete_function()’:
 tests/Default&Delete - Dmitry Turenko/3e.cpp:20:11: error: use of deleted function ‘int test_delete_function()::D::f(int)’
@@ -2277,7 +2277,7 @@ tests/Default&Delete - Dmitry Turenko/3e.cpp:14:13: note: declared here
 
 TEST #128 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\3e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/3e.cpp:20:7: error: attempt to use a deleted function
     d.f(10);
@@ -2294,7 +2294,7 @@ tests/Default&Delete - Dmitry Turenko/3e.cpp:14:13: note: 'f' has been explicitl
 
 TEST #129 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\4e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/4e.cpp: In function ‘int test_prohibit_type()’:
 tests/Default&Delete - Dmitry Turenko/4e.cpp:17:20: error: use of deleted function ‘int test_prohibit_type()::C::make_action(double)’
@@ -2308,7 +2308,7 @@ tests/Default&Delete - Dmitry Turenko/4e.cpp:10:13: note: declared here
 
 TEST #130 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\4e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/4e.cpp:17:7: error: call to deleted member function 'make_action'
     c.make_action(d);
@@ -2328,7 +2328,7 @@ tests/Default&Delete - Dmitry Turenko/4e.cpp:9:13: note: candidate function
 
 TEST #131 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\5e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/5e.cpp: In function ‘int test_prohibit_some_template_inst()’:
 tests/Default&Delete - Dmitry Turenko/5e.cpp:14:16: error: use of deleted function ‘int f(T) [with T = double]’
@@ -2342,7 +2342,7 @@ tests/Default&Delete - Dmitry Turenko/5e.cpp:8:5: note: declared here
 
 TEST #132 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\5e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/5e.cpp:14:5: error: call to deleted function 'f'
     f(double(t));
@@ -2362,7 +2362,7 @@ int f(int x) { return x * x + 1; }
 
 TEST #133 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\6e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/6e.cpp: In function ‘int test_restrict_operatot()’:
 tests/Default&Delete - Dmitry Turenko/6e.cpp:13:10: error: use of deleted function ‘test_restrict_operatot()::C& test_restrict_operatot()::C::operator=(const test_restrict_operatot()::C&)’
@@ -2376,7 +2376,7 @@ tests/Default&Delete - Dmitry Turenko/6e.cpp:9:12: note: declared here
 
 TEST #134 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\6e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Default&Delete - Dmitry Turenko/6e.cpp:13:8: error: overload resolution selected deleted operator '='
     c2 = c1;
@@ -2393,14 +2393,14 @@ tests/Default&Delete - Dmitry Turenko/6e.cpp:9:12: note: candidate function has 
 
 TEST #135 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\7.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #136 succeeded
 File: "tests\\Default&Delete - Dmitry Turenko\\7.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2414,14 +2414,14 @@ Program/Compiler output (stderr):
 
 TEST #137 succeeded
 File: "tests\\Final - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #138 succeeded
 File: "tests\\Final - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2431,7 +2431,7 @@ Program/Compiler output (stderr):
 
 TEST #139 succeeded
 File: "tests\\Final - Eduard Zalyaev\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/002e.cpp:10:6: error: ‘int A::boo()’ marked ‘final’, but is not virtual
   int boo() final { return 2020; }
@@ -2441,7 +2441,7 @@ tests/Final - Eduard Zalyaev/002e.cpp:10:6: error: ‘int A::boo()’ marked ‘
 
 TEST #140 succeeded
 File: "tests\\Final - Eduard Zalyaev\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/002e.cpp:10:12: error: only virtual member functions can be marked 'final'
         int boo() final { return 2020; }
@@ -2455,7 +2455,7 @@ tests/Final - Eduard Zalyaev/002e.cpp:10:12: error: only virtual member function
 
 TEST #141 succeeded
 File: "tests\\Final - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/003e.cpp:19:6: error: virtual function ‘virtual int C::foo()’ overriding final function
   int foo() override { return 24; }
@@ -2468,7 +2468,7 @@ tests/Final - Eduard Zalyaev/003e.cpp:14:6: note: overridden function is ‘virt
 
 TEST #142 succeeded
 File: "tests\\Final - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/003e.cpp:19:6: error: declaration of 'foo' overrides a 'final' function
         int foo() override { return 24; }
@@ -2485,7 +2485,7 @@ tests/Final - Eduard Zalyaev/003e.cpp:14:6: note: overridden virtual function is
 
 TEST #143 succeeded
 File: "tests\\Final - Eduard Zalyaev\\004e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/004e.cpp:12:8: error: cannot derive from ‘final’ base ‘A’ in derived type ‘B’
  struct B : A
@@ -2495,7 +2495,7 @@ tests/Final - Eduard Zalyaev/004e.cpp:12:8: error: cannot derive from ‘final�
 
 TEST #144 succeeded
 File: "tests\\Final - Eduard Zalyaev\\004e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Final - Eduard Zalyaev/004e.cpp:12:12: error: base 'A' is marked 'final'
 struct B : A
@@ -2519,14 +2519,14 @@ tests/Final - Eduard Zalyaev/004e.cpp:14:12: error: only virtual member function
 
 TEST #145 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #146 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2536,7 +2536,7 @@ Program/Compiler output (stderr):
 
 TEST #147 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For conditions - Eduard Zalyaev/002e.cpp: In function ‘int main()’:
 tests/For conditions - Eduard Zalyaev/002e.cpp:11:17: error: could not convert ‘a’ from ‘A’ to ‘bool’
@@ -2547,7 +2547,7 @@ tests/For conditions - Eduard Zalyaev/002e.cpp:11:17: error: could not convert �
 
 TEST #148 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For conditions - Eduard Zalyaev/002e.cpp:11:11: error: value of type 'A' is not contextually convertible to 'bool'
         for (; A a = A();) return 1;
@@ -2561,7 +2561,7 @@ tests/For conditions - Eduard Zalyaev/002e.cpp:11:11: error: value of type 'A' i
 
 TEST #149 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For conditions - Eduard Zalyaev/003e.cpp: In function ‘int main()’:
 tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: error: no match for ‘operator&&’ (operand types are ‘bool’ and ‘A’)
@@ -2574,7 +2574,7 @@ tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: note:   no known conversio
 
 TEST #150 succeeded
 File: "tests\\For conditions - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For conditions - Eduard Zalyaev/003e.cpp:12:19: error: value of type 'A' is not contextually convertible to 'bool'
         for (; (false && a) ;) return 1;
@@ -2595,7 +2595,7 @@ tests/For conditions - Eduard Zalyaev/003e.cpp:12:16: error: invalid operands to
 
 TEST #151 succeeded
 File: "tests\\For Range - Maksim Surkov\\001e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/001e.cpp: In function ‘int main()’:
 tests/For Range - Maksim Surkov/001e.cpp:10:17: error: ‘begin’ was not declared in this scope
@@ -2607,7 +2607,7 @@ tests/For Range - Maksim Surkov/001e.cpp:10:17: error: ‘end’ was not declare
 
 TEST #152 succeeded
 File: "tests\\For Range - Maksim Surkov\\001e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/001e.cpp:10:15: error: invalid range expression of type 'int *'; no viable 'begin' function available
         for (int val : a)
@@ -2621,7 +2621,7 @@ tests/For Range - Maksim Surkov/001e.cpp:10:15: error: invalid range expression 
 
 TEST #153 succeeded
 File: "tests\\For Range - Maksim Surkov\\002.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/002.cpp: In function ‘int main()’:
 tests/For Range - Maksim Surkov/002.cpp:10:45: error: found ‘:’ in nested-name-specifier, expected ‘::’
@@ -2656,7 +2656,7 @@ tests/For Range - Maksim Surkov/002.cpp:10:2: warning: attributes at the beginni
 
 TEST #154 succeeded
 File: "tests\\For Range - Maksim Surkov\\002.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/002.cpp:10:41: error: variable declaration in condition must have an initializer
         [[likely]] for (int a[] = {2,2,2}; int val : a)
@@ -2681,14 +2681,14 @@ tests/For Range - Maksim Surkov/002.cpp:10:4: warning: unknown attribute 'likely
 
 TEST #155 succeeded
 File: "tests\\For Range - Maksim Surkov\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #156 succeeded
 File: "tests\\For Range - Maksim Surkov\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2698,14 +2698,14 @@ Program/Compiler output (stderr):
 
 TEST #157 succeeded
 File: "tests\\For Range - Maksim Surkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #158 succeeded
 File: "tests\\For Range - Maksim Surkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2715,14 +2715,14 @@ Program/Compiler output (stderr):
 
 TEST #159 succeeded
 File: "tests\\For Range - Maksim Surkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #160 succeeded
 File: "tests\\For Range - Maksim Surkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2732,14 +2732,14 @@ Program/Compiler output (stderr):
 
 TEST #161 succeeded
 File: "tests\\For Range - Maksim Surkov\\006.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #162 succeeded
 File: "tests\\For Range - Maksim Surkov\\006.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2749,14 +2749,14 @@ Program/Compiler output (stderr):
 
 TEST #163 succeeded
 File: "tests\\For Range - Maksim Surkov\\007.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #164 succeeded
 File: "tests\\For Range - Maksim Surkov\\007.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2766,14 +2766,14 @@ Program/Compiler output (stderr):
 
 TEST #165 succeeded
 File: "tests\\For Range - Maksim Surkov\\008.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #166 succeeded
 File: "tests\\For Range - Maksim Surkov\\008.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2783,7 +2783,7 @@ Program/Compiler output (stderr):
 
 TEST #167 succeeded
 File: "tests\\For Range - Maksim Surkov\\009e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/009e.cpp: In function ‘int main()’:
 tests/For Range - Maksim Surkov/009e.cpp:10:15: error: increment of read-only reference ‘val’
@@ -2794,7 +2794,7 @@ tests/For Range - Maksim Surkov/009e.cpp:10:15: error: increment of read-only re
 
 TEST #168 succeeded
 File: "tests\\For Range - Maksim Surkov\\009e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/009e.cpp:10:13: error: cannot assign to variable 'val' with const-qualified type 'const int &'
                 result += ++val;
@@ -2811,7 +2811,7 @@ tests/For Range - Maksim Surkov/009e.cpp:9:13: note: variable 'val' declared con
 
 TEST #169 succeeded
 File: "tests\\For Range - Maksim Surkov\\010e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/010e.cpp: In function ‘int main()’:
 tests/For Range - Maksim Surkov/010e.cpp:10:18: error: binding reference of type ‘int&’ to ‘const int’ discards qualifiers
@@ -2822,7 +2822,7 @@ tests/For Range - Maksim Surkov/010e.cpp:10:18: error: binding reference of type
 
 TEST #170 succeeded
 File: "tests\\For Range - Maksim Surkov\\010e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/For Range - Maksim Surkov/010e.cpp:10:12: error: binding value of type 'const int' to reference to type 'int' drops 'const' qualifier
         for (int& val : a)
@@ -2840,14 +2840,14 @@ tests/For Range - Maksim Surkov/010e.cpp:10:12: error: binding value of type 'co
 
 TEST #171 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #172 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2857,7 +2857,7 @@ Program/Compiler output (stderr):
 
 TEST #173 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/002e.cpp: In lambda function:
 tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:28: error: ‘a’ is not captured
@@ -2878,7 +2878,7 @@ tests/Lambda Expressions - Maksim Surkov/002e.cpp:7:16: error: void value not ig
 
 TEST #174 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:28: error: variable 'a' cannot be implicitly captured in a lambda with no capture-default specified
     auto fun = [](){return a;};
@@ -2898,14 +2898,14 @@ tests/Lambda Expressions - Maksim Surkov/002e.cpp:6:16: note: lambda expression 
 
 TEST #175 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #176 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2915,14 +2915,14 @@ Program/Compiler output (stderr):
 
 TEST #177 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #178 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2932,14 +2932,14 @@ Program/Compiler output (stderr):
 
 TEST #179 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #180 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2949,14 +2949,14 @@ Program/Compiler output (stderr):
 
 TEST #181 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\006.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #182 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\006.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -2966,14 +2966,14 @@ Program/Compiler output (stderr):
 
 TEST #183 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\007.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #184 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\007.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/007.cpp:5:20: error: expected body of lambda expression
 auto less_than = []<class T>(T a, auto&& b) { return a < b; };
@@ -2990,7 +2990,7 @@ auto less_than = []<class T>(T a, auto&& b) { return a < b; };
 
 TEST #185 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\008e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/008e.cpp: In lambda function:
 tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:55: error: increment of read-only reference ‘b’
@@ -3001,7 +3001,7 @@ tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:55: error: increment of read
 
 TEST #186 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\008e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:53: error: cannot assign to a variable captured by copy in a non-mutable lambda
     int result = [&b = std::as_const(a)]() { return ++b;}();
@@ -3018,7 +3018,7 @@ tests/Lambda Expressions - Maksim Surkov/008e.cpp:9:9: error: cannot initialize 
 
 TEST #187 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\009e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/009e.cpp: In member function ‘void b::a()’:
 tests/Lambda Expressions - Maksim Surkov/009e.cpp:8:13: error: already captured ‘i’ in lambda expression
@@ -3032,7 +3032,7 @@ tests/Lambda Expressions - Maksim Surkov/009e.cpp:9:17: error: already captured 
 
 TEST #188 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\009e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/009e.cpp:8:13: error: 'i' can appear only once in a capture list
         [i, i] {}; // error
@@ -3056,7 +3056,7 @@ tests/Lambda Expressions - Maksim Surkov/009e.cpp:9:9: warning: expression resul
 
 TEST #189 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\010e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/010e.cpp: In lambda function:
 tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:43: error: inconsistent types ‘int’ and ‘const char*’ deduced for lambda return type
@@ -3070,7 +3070,7 @@ tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:60: error: inconsistent type
 
 TEST #190 succeeded
 File: "tests\\Lambda Expressions - Maksim Surkov\\010e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Lambda Expressions - Maksim Surkov/010e.cpp:3:36: error: 'auto' in return type deduced as 'const char *' here but deduced as 'int' in earlier return statement
 auto fun = []() -> auto {return 1; return "string"; return true;};
@@ -3088,7 +3088,7 @@ auto fun = []() -> auto {return 1; return "string"; return true;};
 
 TEST #191 succeeded
 File: "tests\\Modules - Bulat Khabirov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Modules - Bulat Khabirov/001.cpp:8:1: error: ‘import’ does not name a type; did you mean ‘short’?
  import M;
@@ -3116,7 +3116,7 @@ tests/Modules - Bulat Khabirov/001.cpp:12:12: error: ‘g’ was not declared in
 
 TEST #192 succeeded
 File: "tests\\Modules - Bulat Khabirov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Modules - Bulat Khabirov/001.cpp:8:1: error: unknown type name 'import'
 import M;
@@ -3140,14 +3140,14 @@ tests/Modules - Bulat Khabirov/001.cpp:12:12: error: use of undeclared identifie
 
 TEST #193 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #194 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3157,14 +3157,14 @@ Program/Compiler output (stderr):
 
 TEST #195 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\002.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #196 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\002.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3174,14 +3174,14 @@ Program/Compiler output (stderr):
 
 TEST #197 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #198 succeeded
 File: "tests\\Move assignment operator - Egor Ivkov\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3191,14 +3191,14 @@ Program/Compiler output (stderr):
 
 TEST #199 FAILED
 File: "tests\\Move assignment operator - Egor Ivkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #200 FAILED
 File: "tests\\Move assignment operator - Egor Ivkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3212,14 +3212,14 @@ Program/Compiler output (stderr):
 
 TEST #201 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #202 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3229,14 +3229,14 @@ Program/Compiler output (stderr):
 
 TEST #203 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\002.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #204 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\002.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3246,7 +3246,7 @@ Program/Compiler output (stderr):
 
 TEST #205 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Move constructors - Egor Ivkov/003e.cpp: In function ‘int main()’:
 tests/Move constructors - Egor Ivkov/003e.cpp:22:15: error: cannot bind non-const lvalue reference of type ‘A&’ to an rvalue of type ‘std::remove_reference<A&>::type’ {aka ‘A’}
@@ -3260,7 +3260,7 @@ tests/Move constructors - Egor Ivkov/003e.cpp:12:2: note:   initializing argumen
 
 TEST #206 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Move constructors - Egor Ivkov/003e.cpp:22:4: error: no matching constructor for initialization of 'A'
         A b(std::move(a));
@@ -3280,14 +3280,14 @@ tests/Move constructors - Egor Ivkov/003e.cpp:12:2: note: candidate constructor 
 
 TEST #207 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #208 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3297,14 +3297,14 @@ Program/Compiler output (stderr):
 
 TEST #209 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #210 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3314,14 +3314,14 @@ Program/Compiler output (stderr):
 
 TEST #211 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\006.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #212 succeeded
 File: "tests\\Move constructors - Egor Ivkov\\006.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3335,14 +3335,14 @@ Program/Compiler output (stderr):
 
 TEST #213 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #214 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3352,7 +3352,7 @@ Program/Compiler output (stderr):
 
 TEST #215 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/002e.cpp: In function ‘int main()’:
 tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: cannot convert ‘C*’ to ‘std::nullptr_t’ in assignment
@@ -3363,7 +3363,7 @@ tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: cannot convert ‘C*’ to �
 
 TEST #216 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: assigning to 'std::nullptr_t' (aka 'nullptr_t') from incompatible type 'C *'
   ptr = c;
@@ -3377,7 +3377,7 @@ tests/Nullptr - Anton Prokopev/002e.cpp:9:9: error: assigning to 'std::nullptr_t
 
 TEST #217 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/003e.cpp: In function ‘int main()’:
 tests/Nullptr - Anton Prokopev/003e.cpp:9:12: error: call of overloaded ‘f(std::nullptr_t)’ is ambiguous
@@ -3394,7 +3394,7 @@ tests/Nullptr - Anton Prokopev/003e.cpp:4:6: note: candidate: ‘void f(double*)
 
 TEST #218 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/003e.cpp:9:3: error: call to 'f' is ambiguous
   f(nullptr);
@@ -3414,14 +3414,14 @@ void f(double *i) {}
 
 TEST #219 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\004.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #220 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\004.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3431,7 +3431,7 @@ Program/Compiler output (stderr):
 
 TEST #221 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\005e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/005e.cpp: In function ‘int main()’:
 tests/Nullptr - Anton Prokopev/005e.cpp:9:6: error: call of overloaded ‘f(int)’ is ambiguous
@@ -3451,7 +3451,7 @@ tests/Nullptr - Anton Prokopev/005e.cpp:5:6: note: candidate: ‘void f(std::nul
 
 TEST #222 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\005e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/005e.cpp:9:3: error: call to 'f' is ambiguous
   f(0);
@@ -3474,7 +3474,7 @@ void f(std::nullptr_t i) {}
 
 TEST #223 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\006.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/006.cpp: In function ‘int main()’:
 tests/Nullptr - Anton Prokopev/006.cpp:9:9: error: call of overloaded ‘f(NULL)’ is ambiguous
@@ -3494,7 +3494,7 @@ tests/Nullptr - Anton Prokopev/006.cpp:5:6: note: candidate: ‘void f(std::null
 
 TEST #224 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\006.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/006.cpp:9:3: error: call to 'f' is ambiguous
   f(NULL);
@@ -3517,14 +3517,14 @@ void f(std::nullptr_t i) {}
 
 TEST #225 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\007.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #226 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\007.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3534,7 +3534,7 @@ Program/Compiler output (stderr):
 
 TEST #227 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\008e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/008e.cpp: In function ‘int main()’:
 tests/Nullptr - Anton Prokopev/008e.cpp:12:9: warning: passing NULL to non-pointer argument 1 of ‘void g(int)’ [-Wconversion-null]
@@ -3556,7 +3556,7 @@ tests/Nullptr - Anton Prokopev/008e.cpp:5:4: error: cannot convert ‘std::nullp
 
 TEST #228 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\008e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Nullptr - Anton Prokopev/008e.cpp:12:5: warning: implicit conversion of NULL constant to 'int' [-Wnull-conversion]
   g(NULL);
@@ -3583,14 +3583,14 @@ tests/Nullptr - Anton Prokopev/008e.cpp:15:3: note: in instantiation of function
 
 TEST #229 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\009.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #230 succeeded
 File: "tests\\Nullptr - Anton Prokopev\\009.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3604,14 +3604,14 @@ Program/Compiler output (stderr):
 
 TEST #231 succeeded
 File: "tests\\Override - Dmitry Turenko\\1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #232 succeeded
 File: "tests\\Override - Dmitry Turenko\\1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3621,7 +3621,7 @@ Program/Compiler output (stderr):
 
 TEST #233 succeeded
 File: "tests\\Override - Dmitry Turenko\\2e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Override - Dmitry Turenko/2e.cpp:13:18: error: conflicting return type specified for ‘virtual long int D::foo()’
      virtual long foo() override {
@@ -3634,7 +3634,7 @@ tests/Override - Dmitry Turenko/2e.cpp:7:17: note: overridden function is ‘vir
 
 TEST #234 succeeded
 File: "tests\\Override - Dmitry Turenko\\2e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Override - Dmitry Turenko/2e.cpp:13:18: error: virtual function 'foo' has a different return type ('long') than the function it overrides (which has return type 'int')
     virtual long foo() override {
@@ -3651,14 +3651,14 @@ tests/Override - Dmitry Turenko/2e.cpp:7:17: note: overridden virtual function i
 
 TEST #235 succeeded
 File: "tests\\Override - Dmitry Turenko\\3.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #236 succeeded
 File: "tests\\Override - Dmitry Turenko\\3.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3668,7 +3668,7 @@ Program/Compiler output (stderr):
 
 TEST #237 succeeded
 File: "tests\\Override - Dmitry Turenko\\4e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Override - Dmitry Turenko/4e.cpp:13:9: error: ‘int D::foo()’ marked ‘override’, but does not override
      int foo() override {
@@ -3678,7 +3678,7 @@ tests/Override - Dmitry Turenko/4e.cpp:13:9: error: ‘int D::foo()’ marked �
 
 TEST #238 succeeded
 File: "tests\\Override - Dmitry Turenko\\4e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Override - Dmitry Turenko/4e.cpp:13:15: error: only virtual member functions can be marked 'override'
     int foo() override {
@@ -3696,14 +3696,14 @@ tests/Override - Dmitry Turenko/4e.cpp:13:15: error: only virtual member functio
 
 TEST #239 succeeded
 File: "tests\\RValue - Egor Ivkov\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #240 succeeded
 File: "tests\\RValue - Egor Ivkov\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3713,7 +3713,7 @@ Program/Compiler output (stderr):
 
 TEST #241 succeeded
 File: "tests\\RValue - Egor Ivkov\\002e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/002e.cpp: In function ‘int main()’:
 tests/RValue - Egor Ivkov/002e.cpp:14:12: error: cannot bind non-const lvalue reference of type ‘A&’ to an rvalue of type ‘A’
@@ -3724,7 +3724,7 @@ tests/RValue - Egor Ivkov/002e.cpp:14:12: error: cannot bind non-const lvalue re
 
 TEST #242 succeeded
 File: "tests\\RValue - Egor Ivkov\\002e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/002e.cpp:14:5: error: non-const lvalue reference to type 'A' cannot bind to a temporary of type 'A'
         A& aref = A();
@@ -3738,14 +3738,14 @@ tests/RValue - Egor Ivkov/002e.cpp:14:5: error: non-const lvalue reference to ty
 
 TEST #243 succeeded
 File: "tests\\RValue - Egor Ivkov\\003.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #244 succeeded
 File: "tests\\RValue - Egor Ivkov\\003.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3755,7 +3755,7 @@ Program/Compiler output (stderr):
 
 TEST #245 succeeded
 File: "tests\\RValue - Egor Ivkov\\004e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/004e.cpp: In function ‘int main()’:
 tests/RValue - Egor Ivkov/004e.cpp:13:13: error: cannot bind rvalue reference of type ‘A&&’ to lvalue of type ‘A’
@@ -3766,7 +3766,7 @@ tests/RValue - Egor Ivkov/004e.cpp:13:13: error: cannot bind rvalue reference of
 
 TEST #246 succeeded
 File: "tests\\RValue - Egor Ivkov\\004e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/004e.cpp:13:6: error: rvalue reference to type 'A' cannot bind to lvalue of type 'A'
         A&& aref = a;
@@ -3780,7 +3780,7 @@ tests/RValue - Egor Ivkov/004e.cpp:13:6: error: rvalue reference to type 'A' can
 
 TEST #247 succeeded
 File: "tests\\RValue - Egor Ivkov\\005.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/005.cpp: In function ‘int main()’:
 tests/RValue - Egor Ivkov/005.cpp:13:18: error: ‘move’ is not a member of ‘std’
@@ -3798,7 +3798,7 @@ tests/RValue - Egor Ivkov/005.cpp:13:18:
 
 TEST #248 succeeded
 File: "tests\\RValue - Egor Ivkov\\005.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/RValue - Egor Ivkov/005.cpp:13:13: error: use of undeclared identifier 'std'
         A&& aref = std::move(a);
@@ -3816,14 +3816,14 @@ tests/RValue - Egor Ivkov/005.cpp:13:13: error: use of undeclared identifier 'st
 
 TEST #249 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\01.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #250 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\01.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3833,14 +3833,14 @@ Program/Compiler output (stderr):
 
 TEST #251 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\02.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #252 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\02.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3850,7 +3850,7 @@ Program/Compiler output (stderr):
 
 TEST #253 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\03e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Smart Pointers - Dmitry Turenko/03e.cpp: In function ‘void test_reassign_unique()’:
 tests/Smart Pointers - Dmitry Turenko/03e.cpp:10:34: error: use of deleted function ‘std::unique_ptr<_Tp, _Dp>::unique_ptr(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = int; _Dp = std::default_delete<int>]’
@@ -3866,7 +3866,7 @@ In file included from /usr/include/c++/8/memory:80,
 
 TEST #254 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\03e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Smart Pointers - Dmitry Turenko/03e.cpp:10:26: error: call to deleted constructor of 'std::unique_ptr<int>'
     std::unique_ptr<int> v_copy(v);
@@ -3883,14 +3883,14 @@ tests/Smart Pointers - Dmitry Turenko/03e.cpp:10:26: error: call to deleted cons
 
 TEST #255 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\04.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #256 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\04.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3900,14 +3900,14 @@ Program/Compiler output (stderr):
 
 TEST #257 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\05.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #258 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\05.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3917,14 +3917,14 @@ Program/Compiler output (stderr):
 
 TEST #259 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\06.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #260 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\06.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3934,14 +3934,14 @@ Program/Compiler output (stderr):
 
 TEST #261 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\07.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #262 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\07.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3951,14 +3951,14 @@ Program/Compiler output (stderr):
 
 TEST #263 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\08.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #264 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\08.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3968,14 +3968,14 @@ Program/Compiler output (stderr):
 
 TEST #265 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\09.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #266 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\09.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -3985,14 +3985,14 @@ Program/Compiler output (stderr):
 
 TEST #267 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\10.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #268 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\10.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4002,14 +4002,14 @@ Program/Compiler output (stderr):
 
 TEST #269 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\11.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #270 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\11.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4019,14 +4019,14 @@ Program/Compiler output (stderr):
 
 TEST #271 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\12.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #272 succeeded
 File: "tests\\Smart Pointers - Dmitry Turenko\\12.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4040,14 +4040,14 @@ Program/Compiler output (stderr):
 
 TEST #273 FAILED
 File: "tests\\TypeId - Anton Skudarnov\\1.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #274 FAILED
 File: "tests\\TypeId - Anton Skudarnov\\1.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4057,7 +4057,7 @@ Program/Compiler output (stderr):
 
 TEST #275 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\2.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/TypeId - Anton Skudarnov/2.cpp: In function ‘const int&& foo()’:
 tests/TypeId - Anton Skudarnov/2.cpp:4:9: warning: returning reference to temporary [-Wreturn-local-addr]
@@ -4072,7 +4072,7 @@ tests/TypeId - Anton Skudarnov/2.cpp:5:2: error: extra ‘;’ [-Wpedantic]
 
 TEST #276 FAILED
 File: "tests\\TypeId - Anton Skudarnov\\2.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4082,14 +4082,14 @@ Program/Compiler output (stderr):
 
 TEST #277 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\3.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #278 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\3.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4099,14 +4099,14 @@ Program/Compiler output (stderr):
 
 TEST #279 FAILED
 File: "tests\\TypeId - Anton Skudarnov\\4.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #280 FAILED
 File: "tests\\TypeId - Anton Skudarnov\\4.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4116,14 +4116,14 @@ Program/Compiler output (stderr):
 
 TEST #281 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\5.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #282 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\5.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4133,7 +4133,7 @@ Program/Compiler output (stderr):
 
 TEST #283 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\6e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/TypeId - Anton Skudarnov/6e.cpp: In function ‘const int&& foo()’:
 tests/TypeId - Anton Skudarnov/6e.cpp:5:9: warning: returning reference to temporary [-Wreturn-local-addr]
@@ -4165,7 +4165,7 @@ tests/TypeId - Anton Skudarnov/6e.cpp:11:1: note: to match this ‘{’
 
 TEST #284 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\6e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/TypeId - Anton Skudarnov/6e.cpp:5:9: warning: returning reference to local temporary object [-Wreturn-stack-address]
         return 1;
@@ -4191,7 +4191,7 @@ tests/TypeId - Anton Skudarnov/6e.cpp:11:1: note: to match this '{'
 
 TEST #285 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\7e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/TypeId - Anton Skudarnov/7e.cpp: In function ‘const int&& foo()’:
 tests/TypeId - Anton Skudarnov/7e.cpp:4:9: warning: returning reference to temporary [-Wreturn-local-addr]
@@ -4217,7 +4217,7 @@ tests/TypeId - Anton Skudarnov/7e.cpp:13:26: error: must ‘#include <typeinfo>�
 
 TEST #286 succeeded
 File: "tests\\TypeId - Anton Skudarnov\\7e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/TypeId - Anton Skudarnov/7e.cpp:4:9: warning: returning reference to local temporary object [-Wreturn-stack-address]
         return 1;
@@ -4241,14 +4241,14 @@ tests/TypeId - Anton Skudarnov/7e.cpp:13:19: error: you need to include <typeinf
 
 TEST #287 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
 
 TEST #288 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\001.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 
@@ -4258,7 +4258,7 @@ Program/Compiler output (stderr):
 
 TEST #289 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\002.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 3a23
@@ -4268,7 +4268,7 @@ Program/Compiler output (stderr):
 
 TEST #290 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\002.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 
 3a23
@@ -4281,7 +4281,7 @@ Program/Compiler output (stderr):
 
 TEST #291 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Variadic templates - Eduard Zalyaev/003e.cpp: In function ‘int main()’:
 tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:10: error: type/value mismatch at argument 1 in template parameter list for ‘template<class ... Args> struct Tester’
@@ -4293,7 +4293,7 @@ tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:10: note:   expected a typ
 
 TEST #292 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\003e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Variadic templates - Eduard Zalyaev/003e.cpp:15:9: error: template argument for template type parameter must be a type
         Tester<0> d; //0 is not a type
@@ -4310,7 +4310,7 @@ template<typename ...Args>
 
 TEST #293 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\004e.cpp"
-Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl g++-8 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Variadic templates - Eduard Zalyaev/004e.cpp: In function ‘int main()’:
 tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:112: error: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
@@ -4333,7 +4333,7 @@ tests/Variadic templates - Eduard Zalyaev/004e.cpp:31:52: error: ISO C++ forbids
 
 TEST #294 succeeded
 File: "tests\\Variadic templates - Eduard Zalyaev\\004e.cpp"
-Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe
+Compiler: "wsl clang++-7 -std=c++2a -pedantic-errors -o a.exe"
 Program/Compiler output (stderr):
 tests/Variadic templates - Eduard Zalyaev/004e.cpp:30:74: error: ISO C++11 does not allow conversion from string literal to 'char *' [-Werror,-Wwritable-strings]
         A1<char*, char*, char*, char*>::A2<char*, char*, char*, char*>::printer("I", "A", "M", "B", "O", "R", "E", "D");

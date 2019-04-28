@@ -109,8 +109,8 @@ public:
 		log_file << "\n\nTEST #" << succeeded + failed
 			<< " " << (res ? "succeeded" : "FAILED")
 			<< "\nFile: " << cur_file
-			<< "\nCompiler: \"" << cur_compiler << '\n'
-			<< "Program/Compiler output (stderr):" << std::endl;
+			<< "\nCompiler: \"" << cur_compiler
+			<< "\"\nProgram/Compiler output (stderr):" << std::endl;
 		// FIXME: efficiency, work with streams?
 		char c;
 		while (tmp_log_file.get(c))
